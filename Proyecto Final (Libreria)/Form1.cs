@@ -50,7 +50,7 @@ namespace Proyecto_Final__Libreria_
             }
             catch
             {
-                MessageBox.Show("Favor de agregar elementos");
+                MessageBox.Show("No hay elementos agregados, favor de añadir elementos");
             }
 
         }
@@ -642,7 +642,7 @@ namespace Proyecto_Final__Libreria_
                 cmd.ExecuteNonQuery();
 
                 //Mensaje en caso de exito
-                MessageBox.Show("Registro modificado exitosamente");
+                MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
                 conexion.Close();
             }
             catch
@@ -665,7 +665,7 @@ namespace Proyecto_Final__Libreria_
                 cmd.ExecuteNonQuery();
 
                 //Mensaje de exito
-                MessageBox.Show("Se realizo la eliminacion correctamente, reinicie el programa para que se refleje");
+                MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
 
                 //Se actualiza el combobox
 
@@ -716,7 +716,7 @@ namespace Proyecto_Final__Libreria_
                         ", " + idSeccion + ", " + idFormato + ", " + 1 + ")", conexion);
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("El registro se ha agregado exitosamente, reinicie el programa para que se refleje");
+                    MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
                 }
                 else
                 {
@@ -743,6 +743,9 @@ namespace Proyecto_Final__Libreria_
                 datosFormato = new Dictionary<int, string>();
                 datosEditoriales = new Dictionary<int, string>();
                 cmbEditorialesAsignadas.Items.Clear();
+                cmbEditorialesDisponibles.Text = "";
+                cmbEditorialesAsignadas.Text = "";
+                cmbNombres_Consulta2.Text = "";
 
                 CargarLibros();
                 CargarGeneros();
@@ -786,6 +789,11 @@ namespace Proyecto_Final__Libreria_
             }
         }
 
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnAsignarEditorial_Click(object sender, EventArgs e)
         {
             try
@@ -803,7 +811,9 @@ namespace Proyecto_Final__Libreria_
             {
                 MessageBox.Show("Ha ocurrido un error inesperado");
             }
-}
+            //Se limpia el combobox
+            cmbEditorialesDisponibles.Text = "";
+        }
         //====================================================================================================================
 
         //BOTONES PARA MANIPULAR REGISTROS DE LA TERCER HOJA
@@ -971,65 +981,75 @@ namespace Proyecto_Final__Libreria_
         //PROCESO PARA ACTUALIZAR LOS DATOS AUTOMATICAMENTE AL CAMBIAR DE ELEMENTO EN LA SECCION DE CONSULTA
         private void NombreLibros_SelectedIndexChanged(object sender, EventArgs e)
         {
+            SqlConnection conexion = new SqlConnection(connectionString);
+            conexion.Open();
+            SqlCommand cm = new SqlCommand("select*from INVENTARIO where Nombre_Libro='" + cmbNombreLibros.Text + "'", conexion);
+            SqlDataReader dr = cm.ExecuteReader();
             try
             {
-                // Obtener la ID del registro seleccionado
-                if (cmbNombreLibros.SelectedItem != null)
+                try
                 {
-                    var seleccion = (KeyValuePair<int, string>)cmbNombreLibros.SelectedItem;
-                    //CAMBIAR ESTA VARIABLE POR UNA VARIABLE GLOBAL
-                    idLibro = seleccion.Key;
-                    string nombreSeleccionado = seleccion.Value;
+                    // Obtener la ID del registro seleccionado
+                    if (cmbNombreLibros.SelectedItem != null)
+                    {
+                        var seleccion = (KeyValuePair<int, string>)cmbNombreLibros.SelectedItem;
+                        //CAMBIAR ESTA VARIABLE POR UNA VARIABLE GLOBAL
+                        idLibro = seleccion.Key;
+                        string nombreSeleccionado = seleccion.Value;
+
+                        //SI HAY ALGUN ELEMENTO SELECCIONADO, AUTOMATICAMENTE SE RELLENAN LOS CAMPOS
+                        if (dr.Read() == true)
+                        {
+                            txtCantidadDe.Text = dr["Cantidad_Libros"].ToString();
+                            //txtFechaAdd.Text = dr["Fecha_Adicion"].ToString();
+                            calendarioB.Text = dr["Fecha_Adicion"].ToString();
+
+                            txtAnnPubli.Text = dr["Ann_Publicacion"].ToString();
+                            txtPrecio.Text = dr["Precio"].ToString();
+                            txtAutor.Text = dr["Autor"].ToString();
+                            txtCantVen.Text = dr["Cantidad_Vendida"].ToString();
+
+                            //ESTE BLOQUESITO DE CODIGO + EL METODO PARA CARGAR DATOS AUTOMATICAMENTE
+                            //PERMITEN ACTUALIZAR LA CONSULTA DE ESTE CAMPO
+                            //NO OLVIDAR QUE EL DICCIONARIO SE DECLARA COMO VARIABLE GLOBAL
+                            string gen = dr["ID_Genero"].ToString();
+                            int genNum = int.Parse(gen);
+                            string valorGenero = datosGenero[genNum];
+                            cmbGenero.Text = valorGenero;
+
+                        }
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Selecciono un libro con un elemento invalido, dicho recuadro aparecera en blanco");
+                    cmbGenero.Text = "";
+                }
+                finally
+                {
+                    //===================================================================
+                    string sec = dr["ID_Seccion"].ToString();
+                    int secNum = int.Parse(sec);
+                    int valorSeccion = datosSeccion[secNum];
+                    cmbSeccion.Text = valorSeccion.ToString();
+                    //===================================================================
+                    string exis = dr["ID_Existencia"].ToString();
+                    int secExis = int.Parse(exis);
+                    string valorExistencia = datosExistenciaB[secExis];
+                    cmbExistencia.Text = valorExistencia;
+                    //===================================================================
+                    string formato = dr["ID_Formato"].ToString();
+                    int secFormato = int.Parse(formato);
+                    string valorFormato = datosFormato[secFormato];
+                    cmbFormato.Text = valorFormato;
+                    //===================================================================
+                    conexion.Close();
                 }
             }
             catch
             {
-                MessageBox.Show("En este momento no hay libros agregados");
-            }           
-
-            SqlConnection conexion = new SqlConnection(connectionString);
-            conexion.Open();
-            SqlCommand cm = new SqlCommand("select*from INVENTARIO where Nombre_Libro='" + cmbNombreLibros.Text + "'",conexion);
-            SqlDataReader dr = cm.ExecuteReader();
-
-            //SI HAY ALGUN ELEMENTO SELECCIONADO, AUTOMATICAMENTE SE RELLENAN LOS CAMPOS
-            if (dr.Read() == true) 
-            {
-                txtCantidadDe.Text = dr["Cantidad_Libros"].ToString();
-                //txtFechaAdd.Text = dr["Fecha_Adicion"].ToString();
-                calendarioB.Text = dr["Fecha_Adicion"].ToString();
-
-                txtAnnPubli.Text = dr["Ann_Publicacion"].ToString();
-                txtPrecio.Text = dr["Precio"].ToString();
-                txtAutor.Text = dr["Autor"].ToString();
-                txtCantVen.Text = dr["Cantidad_Vendida"].ToString();
-
-                //ESTE BLOQUESITO DE CODIGO + EL METODO PARA CARGAR DATOS AUTOMATICAMENTE
-                //PERMITEN ACTUALIZAR LA CONSULTA DE ESTE CAMPO
-                //NO OLVIDAR QUE EL DICCIONARIO SE DECLARA COMO VARIABLE GLOBAL
-                string gen = dr["ID_Genero"].ToString();
-                int genNum = int.Parse(gen);
-                string valorGenero = datosGenero[genNum];
-                cmbGenero.Text = valorGenero;
-                //===================================================================
-                string sec = dr["ID_Seccion"].ToString();
-                int secNum = int.Parse(sec);
-                int valorSeccion = datosSeccion[secNum];
-                cmbSeccion.Text = valorSeccion.ToString();
-                //===================================================================
-                string exis = dr["ID_Existencia"].ToString();
-                int secExis = int.Parse(exis);
-                string valorExistencia = datosExistenciaB[secExis];
-                cmbExistencia.Text = valorExistencia;
-                //===================================================================
-                string formato = dr["ID_Formato"].ToString();
-                int secFormato = int.Parse(formato);
-                string valorFormato = datosFormato[secFormato];
-                cmbFormato.Text = valorFormato;
-                //===================================================================
-
+                MessageBox.Show("No hay elementos para cargar, favor de ingresar algunos");
             }
-            conexion.Close();
             
         }
     }

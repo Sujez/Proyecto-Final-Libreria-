@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.AGREGAR = new System.Windows.Forms.TabPage();
+            this.btnAsignarEditorial = new System.Windows.Forms.Button();
+            this.lblHoja2_MensajeEditDisponibles = new System.Windows.Forms.Label();
+            this.cmbEditorialesDisponibles = new System.Windows.Forms.ComboBox();
+            this.lblHoja2_MensajeEditorial = new System.Windows.Forms.Label();
+            this.cmbEditorialesAsignadas = new System.Windows.Forms.ComboBox();
+            this.lblHoja2_MensajeNombre = new System.Windows.Forms.Label();
             this.cmbNombres_Consulta2 = new System.Windows.Forms.ComboBox();
             this.btnEliminarEditorial = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -63,25 +69,22 @@
             this.txtCantidadDe = new System.Windows.Forms.TextBox();
             this.cmbNombreLibros = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnRefrescar = new System.Windows.Forms.Button();
-            this.cmbAddGeneros = new System.Windows.Forms.ComboBox();
-            this.cmbAddEditoriales = new System.Windows.Forms.ComboBox();
-            this.cmbAddFormatos = new System.Windows.Forms.ComboBox();
-            this.btnAddGeneros = new System.Windows.Forms.Button();
-            this.btnDelGeneros = new System.Windows.Forms.Button();
-            this.btnDelEditoriales = new System.Windows.Forms.Button();
-            this.btnAddEditoriales = new System.Windows.Forms.Button();
+            this.lblAddEditoriales = new System.Windows.Forms.Label();
+            this.lblAddFormatos = new System.Windows.Forms.Label();
+            this.lblAddGeneros = new System.Windows.Forms.Label();
             this.btnDelFormatos = new System.Windows.Forms.Button();
             this.btnAddFormatos = new System.Windows.Forms.Button();
-            this.lblAddGeneros = new System.Windows.Forms.Label();
-            this.lblAddFormatos = new System.Windows.Forms.Label();
-            this.lblAddEditoriales = new System.Windows.Forms.Label();
-            this.lblHoja2_MensajeNombre = new System.Windows.Forms.Label();
-            this.lblHoja2_MensajeEditorial = new System.Windows.Forms.Label();
-            this.cmbEditorialesAsignadas = new System.Windows.Forms.ComboBox();
-            this.lblHoja2_MensajeEditDisponibles = new System.Windows.Forms.Label();
-            this.cmbEditorialesDisponibles = new System.Windows.Forms.ComboBox();
-            this.btnAsignarEditorial = new System.Windows.Forms.Button();
+            this.btnDelEditoriales = new System.Windows.Forms.Button();
+            this.btnAddEditoriales = new System.Windows.Forms.Button();
+            this.btnDelGeneros = new System.Windows.Forms.Button();
+            this.btnAddGeneros = new System.Windows.Forms.Button();
+            this.cmbAddFormatos = new System.Windows.Forms.ComboBox();
+            this.cmbAddEditoriales = new System.Windows.Forms.ComboBox();
+            this.cmbAddGeneros = new System.Windows.Forms.ComboBox();
+            this.btnRefrescar = new System.Windows.Forms.Button();
+            this.lblEncabezado1erHoja = new System.Windows.Forms.Label();
+            this.lblEncabezado2daHoja = new System.Windows.Forms.Label();
+            this.lblEncabezado3erHoja = new System.Windows.Forms.Label();
             this.AGREGAR.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.CONSULTAR.SuspendLayout();
@@ -90,6 +93,7 @@
             // 
             // AGREGAR
             // 
+            this.AGREGAR.Controls.Add(this.lblEncabezado2daHoja);
             this.AGREGAR.Controls.Add(this.btnAsignarEditorial);
             this.AGREGAR.Controls.Add(this.lblHoja2_MensajeEditDisponibles);
             this.AGREGAR.Controls.Add(this.cmbEditorialesDisponibles);
@@ -106,6 +110,61 @@
             this.AGREGAR.TabIndex = 0;
             this.AGREGAR.Text = "APARTADO DE EDITORIALES";
             this.AGREGAR.UseVisualStyleBackColor = true;
+            // 
+            // btnAsignarEditorial
+            // 
+            this.btnAsignarEditorial.Location = new System.Drawing.Point(405, 208);
+            this.btnAsignarEditorial.Name = "btnAsignarEditorial";
+            this.btnAsignarEditorial.Size = new System.Drawing.Size(149, 38);
+            this.btnAsignarEditorial.TabIndex = 8;
+            this.btnAsignarEditorial.Text = "Asignar Editorial";
+            this.btnAsignarEditorial.UseVisualStyleBackColor = true;
+            this.btnAsignarEditorial.Click += new System.EventHandler(this.btnAsignarEditorial_Click);
+            // 
+            // lblHoja2_MensajeEditDisponibles
+            // 
+            this.lblHoja2_MensajeEditDisponibles.AutoSize = true;
+            this.lblHoja2_MensajeEditDisponibles.Location = new System.Drawing.Point(402, 151);
+            this.lblHoja2_MensajeEditDisponibles.Name = "lblHoja2_MensajeEditDisponibles";
+            this.lblHoja2_MensajeEditDisponibles.Size = new System.Drawing.Size(169, 16);
+            this.lblHoja2_MensajeEditDisponibles.TabIndex = 7;
+            this.lblHoja2_MensajeEditDisponibles.Text = "Editoriales Disponibles";
+            // 
+            // cmbEditorialesDisponibles
+            // 
+            this.cmbEditorialesDisponibles.FormattingEnabled = true;
+            this.cmbEditorialesDisponibles.Location = new System.Drawing.Point(405, 170);
+            this.cmbEditorialesDisponibles.Name = "cmbEditorialesDisponibles";
+            this.cmbEditorialesDisponibles.Size = new System.Drawing.Size(163, 24);
+            this.cmbEditorialesDisponibles.TabIndex = 6;
+            this.cmbEditorialesDisponibles.SelectedIndexChanged += new System.EventHandler(this.cmbEditorialesDisponibles_SelectedIndexChanged_1);
+            // 
+            // lblHoja2_MensajeEditorial
+            // 
+            this.lblHoja2_MensajeEditorial.AutoSize = true;
+            this.lblHoja2_MensajeEditorial.Location = new System.Drawing.Point(135, 151);
+            this.lblHoja2_MensajeEditorial.Name = "lblHoja2_MensajeEditorial";
+            this.lblHoja2_MensajeEditorial.Size = new System.Drawing.Size(208, 16);
+            this.lblHoja2_MensajeEditorial.TabIndex = 5;
+            this.lblHoja2_MensajeEditorial.Text = "Editoriales Asingadas a libro";
+            // 
+            // cmbEditorialesAsignadas
+            // 
+            this.cmbEditorialesAsignadas.FormattingEnabled = true;
+            this.cmbEditorialesAsignadas.Location = new System.Drawing.Point(155, 170);
+            this.cmbEditorialesAsignadas.Name = "cmbEditorialesAsignadas";
+            this.cmbEditorialesAsignadas.Size = new System.Drawing.Size(163, 24);
+            this.cmbEditorialesAsignadas.TabIndex = 4;
+            this.cmbEditorialesAsignadas.SelectedIndexChanged += new System.EventHandler(this.cmbEditorialesAsignadas_SelectedIndexChanged);
+            // 
+            // lblHoja2_MensajeNombre
+            // 
+            this.lblHoja2_MensajeNombre.AutoSize = true;
+            this.lblHoja2_MensajeNombre.Location = new System.Drawing.Point(266, 57);
+            this.lblHoja2_MensajeNombre.Name = "lblHoja2_MensajeNombre";
+            this.lblHoja2_MensajeNombre.Size = new System.Drawing.Size(203, 16);
+            this.lblHoja2_MensajeNombre.TabIndex = 3;
+            this.lblHoja2_MensajeNombre.Text = "Nombre del libro a consultar";
             // 
             // cmbNombres_Consulta2
             // 
@@ -139,6 +198,7 @@
             // 
             // CONSULTAR
             // 
+            this.CONSULTAR.Controls.Add(this.lblEncabezado1erHoja);
             this.CONSULTAR.Controls.Add(this.btnInsertar);
             this.CONSULTAR.Controls.Add(this.btnEliminar);
             this.CONSULTAR.Controls.Add(this.calendarioB);
@@ -436,6 +496,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblEncabezado3erHoja);
             this.tabPage1.Controls.Add(this.lblAddEditoriales);
             this.tabPage1.Controls.Add(this.lblAddFormatos);
             this.tabPage1.Controls.Add(this.lblAddGeneros);
@@ -455,82 +516,32 @@
             this.tabPage1.Text = "AGREGAR ELEMENTOS";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btnRefrescar
+            // lblAddEditoriales
             // 
-            this.btnRefrescar.Location = new System.Drawing.Point(739, 449);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(91, 67);
-            this.btnRefrescar.TabIndex = 36;
-            this.btnRefrescar.Text = "Refrescar datos";
-            this.btnRefrescar.UseVisualStyleBackColor = true;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            this.lblAddEditoriales.AutoSize = true;
+            this.lblAddEditoriales.Location = new System.Drawing.Point(297, 261);
+            this.lblAddEditoriales.Name = "lblAddEditoriales";
+            this.lblAddEditoriales.Size = new System.Drawing.Size(71, 16);
+            this.lblAddEditoriales.TabIndex = 14;
+            this.lblAddEditoriales.Text = "Editoriales";
             // 
-            // cmbAddGeneros
+            // lblAddFormatos
             // 
-            this.cmbAddGeneros.FormattingEnabled = true;
-            this.cmbAddGeneros.Location = new System.Drawing.Point(76, 62);
-            this.cmbAddGeneros.Name = "cmbAddGeneros";
-            this.cmbAddGeneros.Size = new System.Drawing.Size(182, 24);
-            this.cmbAddGeneros.TabIndex = 0;
-            this.cmbAddGeneros.SelectedIndexChanged += new System.EventHandler(this.cmbAddGeneros_SelectedIndexChanged);
+            this.lblAddFormatos.AutoSize = true;
+            this.lblAddFormatos.Location = new System.Drawing.Point(495, 43);
+            this.lblAddFormatos.Name = "lblAddFormatos";
+            this.lblAddFormatos.Size = new System.Drawing.Size(64, 16);
+            this.lblAddFormatos.TabIndex = 13;
+            this.lblAddFormatos.Text = "Formatos";
             // 
-            // cmbAddEditoriales
+            // lblAddGeneros
             // 
-            this.cmbAddEditoriales.FormattingEnabled = true;
-            this.cmbAddEditoriales.Location = new System.Drawing.Point(244, 280);
-            this.cmbAddEditoriales.Name = "cmbAddEditoriales";
-            this.cmbAddEditoriales.Size = new System.Drawing.Size(182, 24);
-            this.cmbAddEditoriales.TabIndex = 1;
-            this.cmbAddEditoriales.SelectedIndexChanged += new System.EventHandler(this.cmbAddEditoriales_SelectedIndexChanged);
-            // 
-            // cmbAddFormatos
-            // 
-            this.cmbAddFormatos.FormattingEnabled = true;
-            this.cmbAddFormatos.Location = new System.Drawing.Point(429, 62);
-            this.cmbAddFormatos.Name = "cmbAddFormatos";
-            this.cmbAddFormatos.Size = new System.Drawing.Size(182, 24);
-            this.cmbAddFormatos.TabIndex = 2;
-            this.cmbAddFormatos.SelectedIndexChanged += new System.EventHandler(this.cmbAddFormatos_SelectedIndexChanged);
-            // 
-            // btnAddGeneros
-            // 
-            this.btnAddGeneros.Location = new System.Drawing.Point(101, 111);
-            this.btnAddGeneros.Name = "btnAddGeneros";
-            this.btnAddGeneros.Size = new System.Drawing.Size(134, 39);
-            this.btnAddGeneros.TabIndex = 3;
-            this.btnAddGeneros.Text = "Añadir";
-            this.btnAddGeneros.UseVisualStyleBackColor = true;
-            this.btnAddGeneros.Click += new System.EventHandler(this.btnAddGeneros_Click);
-            // 
-            // btnDelGeneros
-            // 
-            this.btnDelGeneros.Location = new System.Drawing.Point(101, 172);
-            this.btnDelGeneros.Name = "btnDelGeneros";
-            this.btnDelGeneros.Size = new System.Drawing.Size(134, 39);
-            this.btnDelGeneros.TabIndex = 4;
-            this.btnDelGeneros.Text = "Eliminar";
-            this.btnDelGeneros.UseVisualStyleBackColor = true;
-            this.btnDelGeneros.Click += new System.EventHandler(this.btnDelGeneros_Click);
-            // 
-            // btnDelEditoriales
-            // 
-            this.btnDelEditoriales.Location = new System.Drawing.Point(264, 390);
-            this.btnDelEditoriales.Name = "btnDelEditoriales";
-            this.btnDelEditoriales.Size = new System.Drawing.Size(134, 39);
-            this.btnDelEditoriales.TabIndex = 6;
-            this.btnDelEditoriales.Text = "Eliminar";
-            this.btnDelEditoriales.UseVisualStyleBackColor = true;
-            this.btnDelEditoriales.Click += new System.EventHandler(this.btnDelEditoriales_Click);
-            // 
-            // btnAddEditoriales
-            // 
-            this.btnAddEditoriales.Location = new System.Drawing.Point(264, 329);
-            this.btnAddEditoriales.Name = "btnAddEditoriales";
-            this.btnAddEditoriales.Size = new System.Drawing.Size(134, 39);
-            this.btnAddEditoriales.TabIndex = 5;
-            this.btnAddEditoriales.Text = "Añadir";
-            this.btnAddEditoriales.UseVisualStyleBackColor = true;
-            this.btnAddEditoriales.Click += new System.EventHandler(this.btnAddEditoriales_Click);
+            this.lblAddGeneros.AutoSize = true;
+            this.lblAddGeneros.Location = new System.Drawing.Point(139, 43);
+            this.lblAddGeneros.Name = "lblAddGeneros";
+            this.lblAddGeneros.Size = new System.Drawing.Size(59, 16);
+            this.lblAddGeneros.TabIndex = 12;
+            this.lblAddGeneros.Text = "Generos";
             // 
             // btnDelFormatos
             // 
@@ -552,87 +563,110 @@
             this.btnAddFormatos.UseVisualStyleBackColor = true;
             this.btnAddFormatos.Click += new System.EventHandler(this.btnAddFormatos_Click);
             // 
-            // lblAddGeneros
+            // btnDelEditoriales
             // 
-            this.lblAddGeneros.AutoSize = true;
-            this.lblAddGeneros.Location = new System.Drawing.Point(139, 43);
-            this.lblAddGeneros.Name = "lblAddGeneros";
-            this.lblAddGeneros.Size = new System.Drawing.Size(59, 16);
-            this.lblAddGeneros.TabIndex = 12;
-            this.lblAddGeneros.Text = "Generos";
+            this.btnDelEditoriales.Location = new System.Drawing.Point(264, 390);
+            this.btnDelEditoriales.Name = "btnDelEditoriales";
+            this.btnDelEditoriales.Size = new System.Drawing.Size(134, 39);
+            this.btnDelEditoriales.TabIndex = 6;
+            this.btnDelEditoriales.Text = "Eliminar";
+            this.btnDelEditoriales.UseVisualStyleBackColor = true;
+            this.btnDelEditoriales.Click += new System.EventHandler(this.btnDelEditoriales_Click);
             // 
-            // lblAddFormatos
+            // btnAddEditoriales
             // 
-            this.lblAddFormatos.AutoSize = true;
-            this.lblAddFormatos.Location = new System.Drawing.Point(495, 43);
-            this.lblAddFormatos.Name = "lblAddFormatos";
-            this.lblAddFormatos.Size = new System.Drawing.Size(64, 16);
-            this.lblAddFormatos.TabIndex = 13;
-            this.lblAddFormatos.Text = "Formatos";
+            this.btnAddEditoriales.Location = new System.Drawing.Point(264, 329);
+            this.btnAddEditoriales.Name = "btnAddEditoriales";
+            this.btnAddEditoriales.Size = new System.Drawing.Size(134, 39);
+            this.btnAddEditoriales.TabIndex = 5;
+            this.btnAddEditoriales.Text = "Añadir";
+            this.btnAddEditoriales.UseVisualStyleBackColor = true;
+            this.btnAddEditoriales.Click += new System.EventHandler(this.btnAddEditoriales_Click);
             // 
-            // lblAddEditoriales
+            // btnDelGeneros
             // 
-            this.lblAddEditoriales.AutoSize = true;
-            this.lblAddEditoriales.Location = new System.Drawing.Point(297, 261);
-            this.lblAddEditoriales.Name = "lblAddEditoriales";
-            this.lblAddEditoriales.Size = new System.Drawing.Size(71, 16);
-            this.lblAddEditoriales.TabIndex = 14;
-            this.lblAddEditoriales.Text = "Editoriales";
+            this.btnDelGeneros.Location = new System.Drawing.Point(101, 172);
+            this.btnDelGeneros.Name = "btnDelGeneros";
+            this.btnDelGeneros.Size = new System.Drawing.Size(134, 39);
+            this.btnDelGeneros.TabIndex = 4;
+            this.btnDelGeneros.Text = "Eliminar";
+            this.btnDelGeneros.UseVisualStyleBackColor = true;
+            this.btnDelGeneros.Click += new System.EventHandler(this.btnDelGeneros_Click);
             // 
-            // lblHoja2_MensajeNombre
+            // btnAddGeneros
             // 
-            this.lblHoja2_MensajeNombre.AutoSize = true;
-            this.lblHoja2_MensajeNombre.Location = new System.Drawing.Point(266, 57);
-            this.lblHoja2_MensajeNombre.Name = "lblHoja2_MensajeNombre";
-            this.lblHoja2_MensajeNombre.Size = new System.Drawing.Size(203, 16);
-            this.lblHoja2_MensajeNombre.TabIndex = 3;
-            this.lblHoja2_MensajeNombre.Text = "Nombre del libro a consultar";
+            this.btnAddGeneros.Location = new System.Drawing.Point(101, 111);
+            this.btnAddGeneros.Name = "btnAddGeneros";
+            this.btnAddGeneros.Size = new System.Drawing.Size(134, 39);
+            this.btnAddGeneros.TabIndex = 3;
+            this.btnAddGeneros.Text = "Añadir";
+            this.btnAddGeneros.UseVisualStyleBackColor = true;
+            this.btnAddGeneros.Click += new System.EventHandler(this.btnAddGeneros_Click);
             // 
-            // lblHoja2_MensajeEditorial
+            // cmbAddFormatos
             // 
-            this.lblHoja2_MensajeEditorial.AutoSize = true;
-            this.lblHoja2_MensajeEditorial.Location = new System.Drawing.Point(135, 151);
-            this.lblHoja2_MensajeEditorial.Name = "lblHoja2_MensajeEditorial";
-            this.lblHoja2_MensajeEditorial.Size = new System.Drawing.Size(208, 16);
-            this.lblHoja2_MensajeEditorial.TabIndex = 5;
-            this.lblHoja2_MensajeEditorial.Text = "Editoriales Asingadas a libro";
+            this.cmbAddFormatos.FormattingEnabled = true;
+            this.cmbAddFormatos.Location = new System.Drawing.Point(429, 62);
+            this.cmbAddFormatos.Name = "cmbAddFormatos";
+            this.cmbAddFormatos.Size = new System.Drawing.Size(182, 24);
+            this.cmbAddFormatos.TabIndex = 2;
+            this.cmbAddFormatos.SelectedIndexChanged += new System.EventHandler(this.cmbAddFormatos_SelectedIndexChanged);
             // 
-            // cmbEditorialesAsignadas
+            // cmbAddEditoriales
             // 
-            this.cmbEditorialesAsignadas.FormattingEnabled = true;
-            this.cmbEditorialesAsignadas.Location = new System.Drawing.Point(155, 170);
-            this.cmbEditorialesAsignadas.Name = "cmbEditorialesAsignadas";
-            this.cmbEditorialesAsignadas.Size = new System.Drawing.Size(163, 24);
-            this.cmbEditorialesAsignadas.TabIndex = 4;
-            this.cmbEditorialesAsignadas.SelectedIndexChanged += new System.EventHandler(this.cmbEditorialesAsignadas_SelectedIndexChanged);
+            this.cmbAddEditoriales.FormattingEnabled = true;
+            this.cmbAddEditoriales.Location = new System.Drawing.Point(244, 280);
+            this.cmbAddEditoriales.Name = "cmbAddEditoriales";
+            this.cmbAddEditoriales.Size = new System.Drawing.Size(182, 24);
+            this.cmbAddEditoriales.TabIndex = 1;
+            this.cmbAddEditoriales.SelectedIndexChanged += new System.EventHandler(this.cmbAddEditoriales_SelectedIndexChanged);
             // 
-            // lblHoja2_MensajeEditDisponibles
+            // cmbAddGeneros
             // 
-            this.lblHoja2_MensajeEditDisponibles.AutoSize = true;
-            this.lblHoja2_MensajeEditDisponibles.Location = new System.Drawing.Point(402, 151);
-            this.lblHoja2_MensajeEditDisponibles.Name = "lblHoja2_MensajeEditDisponibles";
-            this.lblHoja2_MensajeEditDisponibles.Size = new System.Drawing.Size(169, 16);
-            this.lblHoja2_MensajeEditDisponibles.TabIndex = 7;
-            this.lblHoja2_MensajeEditDisponibles.Text = "Editoriales Disponibles";
+            this.cmbAddGeneros.FormattingEnabled = true;
+            this.cmbAddGeneros.Location = new System.Drawing.Point(76, 62);
+            this.cmbAddGeneros.Name = "cmbAddGeneros";
+            this.cmbAddGeneros.Size = new System.Drawing.Size(182, 24);
+            this.cmbAddGeneros.TabIndex = 0;
+            this.cmbAddGeneros.SelectedIndexChanged += new System.EventHandler(this.cmbAddGeneros_SelectedIndexChanged);
             // 
-            // cmbEditorialesDisponibles
+            // btnRefrescar
             // 
-            this.cmbEditorialesDisponibles.FormattingEnabled = true;
-            this.cmbEditorialesDisponibles.Location = new System.Drawing.Point(405, 170);
-            this.cmbEditorialesDisponibles.Name = "cmbEditorialesDisponibles";
-            this.cmbEditorialesDisponibles.Size = new System.Drawing.Size(163, 24);
-            this.cmbEditorialesDisponibles.TabIndex = 6;
-            this.cmbEditorialesDisponibles.SelectedIndexChanged += new System.EventHandler(this.cmbEditorialesDisponibles_SelectedIndexChanged_1);
+            this.btnRefrescar.Location = new System.Drawing.Point(739, 449);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(91, 67);
+            this.btnRefrescar.TabIndex = 36;
+            this.btnRefrescar.Text = "Refrescar datos";
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
-            // btnAsignarEditorial
+            // lblEncabezado1erHoja
             // 
-            this.btnAsignarEditorial.Location = new System.Drawing.Point(405, 208);
-            this.btnAsignarEditorial.Name = "btnAsignarEditorial";
-            this.btnAsignarEditorial.Size = new System.Drawing.Size(149, 38);
-            this.btnAsignarEditorial.TabIndex = 8;
-            this.btnAsignarEditorial.Text = "Asignar Editorial";
-            this.btnAsignarEditorial.UseVisualStyleBackColor = true;
-            this.btnAsignarEditorial.Click += new System.EventHandler(this.btnAsignarEditorial_Click);
+            this.lblEncabezado1erHoja.AutoSize = true;
+            this.lblEncabezado1erHoja.Location = new System.Drawing.Point(144, 3);
+            this.lblEncabezado1erHoja.Name = "lblEncabezado1erHoja";
+            this.lblEncabezado1erHoja.Size = new System.Drawing.Size(367, 16);
+            this.lblEncabezado1erHoja.TabIndex = 36;
+            this.lblEncabezado1erHoja.Text = "APARTADO DE CONSULTA Y MANIPULACION DE DATOS";
+            // 
+            // lblEncabezado2daHoja
+            // 
+            this.lblEncabezado2daHoja.AutoSize = true;
+            this.lblEncabezado2daHoja.Location = new System.Drawing.Point(167, 14);
+            this.lblEncabezado2daHoja.Name = "lblEncabezado2daHoja";
+            this.lblEncabezado2daHoja.Size = new System.Drawing.Size(404, 16);
+            this.lblEncabezado2daHoja.TabIndex = 9;
+            this.lblEncabezado2daHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR EDITORIALES";
+            // 
+            // lblEncabezado3erHoja
+            // 
+            this.lblEncabezado3erHoja.AutoSize = true;
+            this.lblEncabezado3erHoja.Location = new System.Drawing.Point(122, 13);
+            this.lblEncabezado3erHoja.Name = "lblEncabezado3erHoja";
+            this.lblEncabezado3erHoja.Size = new System.Drawing.Size(446, 16);
+            this.lblEncabezado3erHoja.TabIndex = 15;
+            this.lblEncabezado3erHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR ELEMENTOS DISPONIBLES";
+            this.lblEncabezado3erHoja.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Form1
             // 
@@ -711,6 +745,9 @@
         private System.Windows.Forms.Label lblHoja2_MensajeEditorial;
         private System.Windows.Forms.ComboBox cmbEditorialesAsignadas;
         private System.Windows.Forms.Button btnAsignarEditorial;
+        private System.Windows.Forms.Label lblEncabezado1erHoja;
+        private System.Windows.Forms.Label lblEncabezado2daHoja;
+        private System.Windows.Forms.Label lblEncabezado3erHoja;
     }
 }
 
