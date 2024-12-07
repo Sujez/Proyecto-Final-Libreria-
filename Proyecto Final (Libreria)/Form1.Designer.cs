@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.AGREGAR = new System.Windows.Forms.TabPage();
+            this.lblEncabezado2daHoja = new System.Windows.Forms.Label();
             this.btnAsignarEditorial = new System.Windows.Forms.Button();
             this.lblHoja2_MensajeEditDisponibles = new System.Windows.Forms.Label();
             this.cmbEditorialesDisponibles = new System.Windows.Forms.ComboBox();
@@ -39,6 +40,7 @@
             this.btnEliminarEditorial = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.CONSULTAR = new System.Windows.Forms.TabPage();
+            this.lblEncabezado1erHoja = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.calendarioB = new System.Windows.Forms.DateTimePicker();
@@ -69,6 +71,7 @@
             this.txtCantidadDe = new System.Windows.Forms.TextBox();
             this.cmbNombreLibros = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblEncabezado3erHoja = new System.Windows.Forms.Label();
             this.lblAddEditoriales = new System.Windows.Forms.Label();
             this.lblAddFormatos = new System.Windows.Forms.Label();
             this.lblAddGeneros = new System.Windows.Forms.Label();
@@ -82,9 +85,6 @@
             this.cmbAddEditoriales = new System.Windows.Forms.ComboBox();
             this.cmbAddGeneros = new System.Windows.Forms.ComboBox();
             this.btnRefrescar = new System.Windows.Forms.Button();
-            this.lblEncabezado1erHoja = new System.Windows.Forms.Label();
-            this.lblEncabezado2daHoja = new System.Windows.Forms.Label();
-            this.lblEncabezado3erHoja = new System.Windows.Forms.Label();
             this.AGREGAR.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.CONSULTAR.SuspendLayout();
@@ -111,6 +111,15 @@
             this.AGREGAR.Text = "APARTADO DE EDITORIALES";
             this.AGREGAR.UseVisualStyleBackColor = true;
             // 
+            // lblEncabezado2daHoja
+            // 
+            this.lblEncabezado2daHoja.AutoSize = true;
+            this.lblEncabezado2daHoja.Location = new System.Drawing.Point(167, 14);
+            this.lblEncabezado2daHoja.Name = "lblEncabezado2daHoja";
+            this.lblEncabezado2daHoja.Size = new System.Drawing.Size(404, 16);
+            this.lblEncabezado2daHoja.TabIndex = 9;
+            this.lblEncabezado2daHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR EDITORIALES";
+            // 
             // btnAsignarEditorial
             // 
             this.btnAsignarEditorial.Location = new System.Drawing.Point(405, 208);
@@ -132,6 +141,7 @@
             // 
             // cmbEditorialesDisponibles
             // 
+            this.cmbEditorialesDisponibles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEditorialesDisponibles.FormattingEnabled = true;
             this.cmbEditorialesDisponibles.Location = new System.Drawing.Point(405, 170);
             this.cmbEditorialesDisponibles.Name = "cmbEditorialesDisponibles";
@@ -150,6 +160,7 @@
             // 
             // cmbEditorialesAsignadas
             // 
+            this.cmbEditorialesAsignadas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEditorialesAsignadas.FormattingEnabled = true;
             this.cmbEditorialesAsignadas.Location = new System.Drawing.Point(155, 170);
             this.cmbEditorialesAsignadas.Name = "cmbEditorialesAsignadas";
@@ -168,6 +179,7 @@
             // 
             // cmbNombres_Consulta2
             // 
+            this.cmbNombres_Consulta2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNombres_Consulta2.FormattingEnabled = true;
             this.cmbNombres_Consulta2.Location = new System.Drawing.Point(220, 76);
             this.cmbNombres_Consulta2.Name = "cmbNombres_Consulta2";
@@ -235,6 +247,15 @@
             this.CONSULTAR.TabIndex = 1;
             this.CONSULTAR.Text = "CONSULTA Y MANIPULACION";
             this.CONSULTAR.UseVisualStyleBackColor = true;
+            // 
+            // lblEncabezado1erHoja
+            // 
+            this.lblEncabezado1erHoja.AutoSize = true;
+            this.lblEncabezado1erHoja.Location = new System.Drawing.Point(144, 3);
+            this.lblEncabezado1erHoja.Name = "lblEncabezado1erHoja";
+            this.lblEncabezado1erHoja.Size = new System.Drawing.Size(367, 16);
+            this.lblEncabezado1erHoja.TabIndex = 36;
+            this.lblEncabezado1erHoja.Text = "APARTADO DE CONSULTA Y MANIPULACION DE DATOS";
             // 
             // btnInsertar
             // 
@@ -316,6 +337,7 @@
             // 
             // cmbFormato
             // 
+            this.cmbFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFormato.FormattingEnabled = true;
             this.cmbFormato.Location = new System.Drawing.Point(337, 354);
             this.cmbFormato.Name = "cmbFormato";
@@ -335,6 +357,7 @@
             // 
             // cmbSeccion
             // 
+            this.cmbSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeccion.FormattingEnabled = true;
             this.cmbSeccion.Location = new System.Drawing.Point(337, 287);
             this.cmbSeccion.Name = "cmbSeccion";
@@ -344,6 +367,7 @@
             // 
             // cmbExistencia
             // 
+            this.cmbExistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbExistencia.FormattingEnabled = true;
             this.cmbExistencia.Location = new System.Drawing.Point(337, 222);
             this.cmbExistencia.Name = "cmbExistencia";
@@ -353,12 +377,14 @@
             // 
             // cmbGenero
             // 
+            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(337, 160);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(174, 24);
             this.cmbGenero.TabIndex = 22;
             this.cmbGenero.SelectedIndexChanged += new System.EventHandler(this.cmbGenero_SelectedIndexChanged);
+            this.cmbGenero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGenero_KeyPress);
             // 
             // lblSeccion
             // 
@@ -402,6 +428,7 @@
             this.txtCantVen.Name = "txtCantVen";
             this.txtCantVen.Size = new System.Drawing.Size(80, 22);
             this.txtCantVen.TabIndex = 14;
+            this.txtCantVen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantVen_KeyPress);
             // 
             // lblAutor
             // 
@@ -418,6 +445,7 @@
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.Size = new System.Drawing.Size(231, 22);
             this.txtAutor.TabIndex = 12;
+            this.txtAutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAutor_KeyPress);
             // 
             // lblPrecio
             // 
@@ -434,6 +462,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(87, 22);
             this.txtPrecio.TabIndex = 10;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblAnnPubli
             // 
@@ -450,6 +479,7 @@
             this.txtAnnPubli.Name = "txtAnnPubli";
             this.txtAnnPubli.Size = new System.Drawing.Size(87, 22);
             this.txtAnnPubli.TabIndex = 8;
+            this.txtAnnPubli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnnPubli_KeyPress);
             // 
             // lblFechaAdd
             // 
@@ -484,6 +514,7 @@
             this.txtCantidadDe.Name = "txtCantidadDe";
             this.txtCantidadDe.Size = new System.Drawing.Size(87, 22);
             this.txtCantidadDe.TabIndex = 3;
+            this.txtCantidadDe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadDe_KeyPress);
             // 
             // cmbNombreLibros
             // 
@@ -515,6 +546,16 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "AGREGAR ELEMENTOS";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblEncabezado3erHoja
+            // 
+            this.lblEncabezado3erHoja.AutoSize = true;
+            this.lblEncabezado3erHoja.Location = new System.Drawing.Point(122, 13);
+            this.lblEncabezado3erHoja.Name = "lblEncabezado3erHoja";
+            this.lblEncabezado3erHoja.Size = new System.Drawing.Size(446, 16);
+            this.lblEncabezado3erHoja.TabIndex = 15;
+            this.lblEncabezado3erHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR ELEMENTOS DISPONIBLES";
+            this.lblEncabezado3erHoja.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblAddEditoriales
             // 
@@ -611,6 +652,7 @@
             this.cmbAddFormatos.Size = new System.Drawing.Size(182, 24);
             this.cmbAddFormatos.TabIndex = 2;
             this.cmbAddFormatos.SelectedIndexChanged += new System.EventHandler(this.cmbAddFormatos_SelectedIndexChanged);
+            this.cmbAddFormatos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbAddFormatos_KeyPress);
             // 
             // cmbAddEditoriales
             // 
@@ -620,6 +662,7 @@
             this.cmbAddEditoriales.Size = new System.Drawing.Size(182, 24);
             this.cmbAddEditoriales.TabIndex = 1;
             this.cmbAddEditoriales.SelectedIndexChanged += new System.EventHandler(this.cmbAddEditoriales_SelectedIndexChanged);
+            this.cmbAddEditoriales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbAddEditoriales_KeyPress);
             // 
             // cmbAddGeneros
             // 
@@ -629,6 +672,7 @@
             this.cmbAddGeneros.Size = new System.Drawing.Size(182, 24);
             this.cmbAddGeneros.TabIndex = 0;
             this.cmbAddGeneros.SelectedIndexChanged += new System.EventHandler(this.cmbAddGeneros_SelectedIndexChanged);
+            this.cmbAddGeneros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbAddGeneros_KeyPress);
             // 
             // btnRefrescar
             // 
@@ -639,34 +683,6 @@
             this.btnRefrescar.Text = "Refrescar datos";
             this.btnRefrescar.UseVisualStyleBackColor = true;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
-            // 
-            // lblEncabezado1erHoja
-            // 
-            this.lblEncabezado1erHoja.AutoSize = true;
-            this.lblEncabezado1erHoja.Location = new System.Drawing.Point(144, 3);
-            this.lblEncabezado1erHoja.Name = "lblEncabezado1erHoja";
-            this.lblEncabezado1erHoja.Size = new System.Drawing.Size(367, 16);
-            this.lblEncabezado1erHoja.TabIndex = 36;
-            this.lblEncabezado1erHoja.Text = "APARTADO DE CONSULTA Y MANIPULACION DE DATOS";
-            // 
-            // lblEncabezado2daHoja
-            // 
-            this.lblEncabezado2daHoja.AutoSize = true;
-            this.lblEncabezado2daHoja.Location = new System.Drawing.Point(167, 14);
-            this.lblEncabezado2daHoja.Name = "lblEncabezado2daHoja";
-            this.lblEncabezado2daHoja.Size = new System.Drawing.Size(404, 16);
-            this.lblEncabezado2daHoja.TabIndex = 9;
-            this.lblEncabezado2daHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR EDITORIALES";
-            // 
-            // lblEncabezado3erHoja
-            // 
-            this.lblEncabezado3erHoja.AutoSize = true;
-            this.lblEncabezado3erHoja.Location = new System.Drawing.Point(122, 13);
-            this.lblEncabezado3erHoja.Name = "lblEncabezado3erHoja";
-            this.lblEncabezado3erHoja.Size = new System.Drawing.Size(446, 16);
-            this.lblEncabezado3erHoja.TabIndex = 15;
-            this.lblEncabezado3erHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR ELEMENTOS DISPONIBLES";
-            this.lblEncabezado3erHoja.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Form1
             // 
