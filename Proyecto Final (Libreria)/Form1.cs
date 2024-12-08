@@ -916,7 +916,7 @@ namespace Proyecto_Final__Libreria_
 
                 //Efecto de sonido
                 SoundPlayer Pagina = new SoundPlayer();
-                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
                 Pagina.Play();
             }
             else
@@ -941,7 +941,7 @@ namespace Proyecto_Final__Libreria_
 
                 //Efecto de sonido
                 SoundPlayer Pagina = new SoundPlayer();
-                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
                 Pagina.Play();
             }
             else
@@ -1199,7 +1199,7 @@ namespace Proyecto_Final__Libreria_
                 catch
                 {
                     MessageBox.Show("Selecciono un libro con un elemento invalido, dicho recuadro aparecera en blanco");
-                    cmbGenero.Text = "";
+                    cmbGenero.SelectedIndex = -1;
                 }
                 finally
                 {
