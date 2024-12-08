@@ -33,7 +33,7 @@ namespace Proyecto_Final__Libreria_
         Dictionary<int, string> datosEditoriales = new Dictionary<int, string>();
 
         //CAMBIAR EL DATA SOURCE PARA QUE LA BASE DE DATOS SE CONECTE A LA BD DE LA COMPU
-        string connectionString = "Data Source=DESKTOP-BF3NJMJ;Initial Catalog=BD_LIBRERIA; Integrated Security=True";
+        string connectionString = "Data Source=LAPTOP-FVNNPBGP;Initial Catalog=BD_LIBRERIA; Integrated Security=True";
 
         public Form1()
         {
