@@ -34,7 +34,7 @@ namespace Proyecto_Final__Libreria_
         Dictionary<int, string> datosEditoriales = new Dictionary<int, string>();
 
         //CAMBIAR EL DATA SOURCE PARA QUE LA BASE DE DATOS SE CONECTE A LA BD DE LA COMPU
-        string connectionString = "Data Source=LAPTOP-FVNNPBGP;Initial Catalog=BD_LIBRERIA; Integrated Security=True";
+        string connectionString = "Data Source=DESKTOP-BF3NJMJ;Initial Catalog=BD_LIBRERIA; Integrated Security=True";
 
         public Form1()
         {
@@ -1218,13 +1218,18 @@ namespace Proyecto_Final__Libreria_
                     int secFormato = int.Parse(formato);
                     string valorFormato = datosFormato[secFormato];
                     cmbFormato.Text = valorFormato;
+                    if (cmbFormato.Text == "")
+                    {
+                        MessageBox.Show("Formato inexistente");
+                    }
                     //===================================================================
+                    
                     conexion.Close();
                 }
             }
             catch
             {
-                MessageBox.Show("No hay elementos para cargar, favor de ingresar algunos");
+                MessageBox.Show("Hubo un error por datos inexistentes, favor de revisar");
             }
             
         }

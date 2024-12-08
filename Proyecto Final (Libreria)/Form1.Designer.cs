@@ -150,11 +150,11 @@
             this.AGREGAR.Controls.Add(this.lblHoja2_MensajeNombre);
             this.AGREGAR.Controls.Add(this.cmbNombres_Consulta2);
             this.AGREGAR.Controls.Add(this.btnEliminarEditorial);
-            this.AGREGAR.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AGREGAR.Location = new System.Drawing.Point(4, 29);
+            this.AGREGAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AGREGAR.Location = new System.Drawing.Point(4, 32);
             this.AGREGAR.Name = "AGREGAR";
             this.AGREGAR.Padding = new System.Windows.Forms.Padding(3);
-            this.AGREGAR.Size = new System.Drawing.Size(602, 554);
+            this.AGREGAR.Size = new System.Drawing.Size(624, 551);
             this.AGREGAR.TabIndex = 0;
             this.AGREGAR.Text = "Editoriales de un Libro";
             // 
@@ -199,10 +199,10 @@
             // lblEncabezado2daHoja
             // 
             this.lblEncabezado2daHoja.AutoSize = true;
-            this.lblEncabezado2daHoja.Font = new System.Drawing.Font("Nexa Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncabezado2daHoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEncabezado2daHoja.Location = new System.Drawing.Point(96, 18);
             this.lblEncabezado2daHoja.Name = "lblEncabezado2daHoja";
-            this.lblEncabezado2daHoja.Size = new System.Drawing.Size(409, 50);
+            this.lblEncabezado2daHoja.Size = new System.Drawing.Size(512, 58);
             this.lblEncabezado2daHoja.TabIndex = 9;
             this.lblEncabezado2daHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR \r\nEDITORIALES DE UN LIBRO";
             this.lblEncabezado2daHoja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,7 +211,7 @@
             // 
             this.btnAsignarEditorial.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnAsignarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAsignarEditorial.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignarEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignarEditorial.Location = new System.Drawing.Point(129, 453);
             this.btnAsignarEditorial.Name = "btnAsignarEditorial";
             this.btnAsignarEditorial.Size = new System.Drawing.Size(149, 44);
@@ -223,22 +223,22 @@
             // lblHoja2_MensajeEditDisponibles
             // 
             this.lblHoja2_MensajeEditDisponibles.AutoSize = true;
-            this.lblHoja2_MensajeEditDisponibles.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoja2_MensajeEditDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoja2_MensajeEditDisponibles.Location = new System.Drawing.Point(67, 380);
             this.lblHoja2_MensajeEditDisponibles.Name = "lblHoja2_MensajeEditDisponibles";
-            this.lblHoja2_MensajeEditDisponibles.Size = new System.Drawing.Size(193, 21);
+            this.lblHoja2_MensajeEditDisponibles.Size = new System.Drawing.Size(241, 25);
             this.lblHoja2_MensajeEditDisponibles.TabIndex = 7;
             this.lblHoja2_MensajeEditDisponibles.Text = "Editoriales disponibles :";
             // 
             // cmbEditorialesDisponibles
             // 
             this.cmbEditorialesDisponibles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEditorialesDisponibles.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEditorialesDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEditorialesDisponibles.ForeColor = System.Drawing.Color.DimGray;
             this.cmbEditorialesDisponibles.FormattingEnabled = true;
             this.cmbEditorialesDisponibles.Location = new System.Drawing.Point(65, 409);
             this.cmbEditorialesDisponibles.Name = "cmbEditorialesDisponibles";
-            this.cmbEditorialesDisponibles.Size = new System.Drawing.Size(456, 29);
+            this.cmbEditorialesDisponibles.Size = new System.Drawing.Size(456, 33);
             this.cmbEditorialesDisponibles.TabIndex = 6;
             this.toolTip1.SetToolTip(this.cmbEditorialesDisponibles, "Aquí veras todas las editoriales que maneja la librería.\r\n*NOTA : Si quieres asig" +
         "nar una editorial al libro, seleccionala primero antes de darle al botón.");
@@ -247,22 +247,22 @@
             // lblHoja2_MensajeEditorial
             // 
             this.lblHoja2_MensajeEditorial.AutoSize = true;
-            this.lblHoja2_MensajeEditorial.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoja2_MensajeEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoja2_MensajeEditorial.Location = new System.Drawing.Point(60, 203);
             this.lblHoja2_MensajeEditorial.Name = "lblHoja2_MensajeEditorial";
-            this.lblHoja2_MensajeEditorial.Size = new System.Drawing.Size(243, 21);
+            this.lblHoja2_MensajeEditorial.Size = new System.Drawing.Size(301, 25);
             this.lblHoja2_MensajeEditorial.TabIndex = 5;
             this.lblHoja2_MensajeEditorial.Text = "Editoriales asingadas al libro :";
             // 
             // cmbEditorialesAsignadas
             // 
             this.cmbEditorialesAsignadas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEditorialesAsignadas.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEditorialesAsignadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEditorialesAsignadas.ForeColor = System.Drawing.Color.DimGray;
             this.cmbEditorialesAsignadas.FormattingEnabled = true;
             this.cmbEditorialesAsignadas.Location = new System.Drawing.Point(63, 239);
             this.cmbEditorialesAsignadas.Name = "cmbEditorialesAsignadas";
-            this.cmbEditorialesAsignadas.Size = new System.Drawing.Size(458, 29);
+            this.cmbEditorialesAsignadas.Size = new System.Drawing.Size(458, 33);
             this.cmbEditorialesAsignadas.TabIndex = 4;
             this.toolTip1.SetToolTip(this.cmbEditorialesAsignadas, "Aquí se mostraran todas las editoriales a las que el libro pertenece.\r\n*NOTA : Si" +
         " deseas quitar esa editorial del libro, seleccionalo primero antes de darle al b" +
@@ -272,22 +272,22 @@
             // lblHoja2_MensajeNombre
             // 
             this.lblHoja2_MensajeNombre.AutoSize = true;
-            this.lblHoja2_MensajeNombre.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoja2_MensajeNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoja2_MensajeNombre.Location = new System.Drawing.Point(67, 94);
             this.lblHoja2_MensajeNombre.Name = "lblHoja2_MensajeNombre";
-            this.lblHoja2_MensajeNombre.Size = new System.Drawing.Size(147, 21);
+            this.lblHoja2_MensajeNombre.Size = new System.Drawing.Size(182, 25);
             this.lblHoja2_MensajeNombre.TabIndex = 3;
             this.lblHoja2_MensajeNombre.Text = "Nombre del libro :";
             // 
             // cmbNombres_Consulta2
             // 
             this.cmbNombres_Consulta2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNombres_Consulta2.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNombres_Consulta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNombres_Consulta2.ForeColor = System.Drawing.Color.DimGray;
             this.cmbNombres_Consulta2.FormattingEnabled = true;
             this.cmbNombres_Consulta2.Location = new System.Drawing.Point(64, 118);
             this.cmbNombres_Consulta2.Name = "cmbNombres_Consulta2";
-            this.cmbNombres_Consulta2.Size = new System.Drawing.Size(458, 29);
+            this.cmbNombres_Consulta2.Size = new System.Drawing.Size(458, 33);
             this.cmbNombres_Consulta2.TabIndex = 2;
             this.cmbNombres_Consulta2.SelectedIndexChanged += new System.EventHandler(this.cmbNombres_Consulta2_SelectedIndexChanged);
             // 
@@ -295,7 +295,7 @@
             // 
             this.btnEliminarEditorial.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnEliminarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnEliminarEditorial.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarEditorial.Location = new System.Drawing.Point(129, 286);
             this.btnEliminarEditorial.Name = "btnEliminarEditorial";
             this.btnEliminarEditorial.Size = new System.Drawing.Size(149, 44);
@@ -354,11 +354,11 @@
             this.CONSULTAR.Controls.Add(this.lblNombreLibro);
             this.CONSULTAR.Controls.Add(this.txtCantidadDe);
             this.CONSULTAR.Controls.Add(this.cmbNombreLibros);
-            this.CONSULTAR.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CONSULTAR.Location = new System.Drawing.Point(4, 29);
+            this.CONSULTAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CONSULTAR.Location = new System.Drawing.Point(4, 32);
             this.CONSULTAR.Name = "CONSULTAR";
             this.CONSULTAR.Padding = new System.Windows.Forms.Padding(3);
-            this.CONSULTAR.Size = new System.Drawing.Size(602, 554);
+            this.CONSULTAR.Size = new System.Drawing.Size(602, 551);
             this.CONSULTAR.TabIndex = 1;
             this.CONSULTAR.Text = "Consulta y Modificación general";
             this.CONSULTAR.Click += new System.EventHandler(this.CONSULTAR_Click);
@@ -467,10 +467,10 @@
             // lblEncabezado1erHoja
             // 
             this.lblEncabezado1erHoja.AutoSize = true;
-            this.lblEncabezado1erHoja.Font = new System.Drawing.Font("Nexa Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncabezado1erHoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEncabezado1erHoja.Location = new System.Drawing.Point(26, 21);
             this.lblEncabezado1erHoja.Name = "lblEncabezado1erHoja";
-            this.lblEncabezado1erHoja.Size = new System.Drawing.Size(550, 25);
+            this.lblEncabezado1erHoja.Size = new System.Drawing.Size(699, 29);
             this.lblEncabezado1erHoja.TabIndex = 36;
             this.lblEncabezado1erHoja.Text = "APARTADO DE CONSULTA Y MANIPULACION DE DATOS";
             // 
@@ -479,7 +479,7 @@
             this.btnInsertar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsertar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnInsertar.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.Location = new System.Drawing.Point(110, 495);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(91, 44);
@@ -493,7 +493,7 @@
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnEliminar.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(273, 495);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(86, 44);
@@ -508,11 +508,11 @@
             this.calendarioB.CalendarTitleBackColor = System.Drawing.Color.DarkGray;
             this.calendarioB.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.calendarioB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calendarioB.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendarioB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarioB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.calendarioB.Location = new System.Drawing.Point(394, 145);
             this.calendarioB.Name = "calendarioB";
-            this.calendarioB.Size = new System.Drawing.Size(134, 27);
+            this.calendarioB.Size = new System.Drawing.Size(134, 26);
             this.calendarioB.TabIndex = 33;
             this.toolTip1.SetToolTip(this.calendarioB, "Fecha en la que el libro se empieza a vender en la librería.\r\n");
             // 
@@ -521,7 +521,7 @@
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnModificar.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(430, 495);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(88, 44);
@@ -536,22 +536,22 @@
             // 
             this.cmbFormato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFormato.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFormato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFormato.ForeColor = System.Drawing.Color.DimGray;
             this.cmbFormato.FormattingEnabled = true;
             this.cmbFormato.Location = new System.Drawing.Point(392, 289);
             this.cmbFormato.Name = "cmbFormato";
-            this.cmbFormato.Size = new System.Drawing.Size(136, 25);
+            this.cmbFormato.Size = new System.Drawing.Size(136, 28);
             this.cmbFormato.TabIndex = 26;
             this.cmbFormato.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // lblFormato
             // 
             this.lblFormato.AutoSize = true;
-            this.lblFormato.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormato.Location = new System.Drawing.Point(390, 265);
             this.lblFormato.Name = "lblFormato";
-            this.lblFormato.Size = new System.Drawing.Size(87, 21);
+            this.lblFormato.Size = new System.Drawing.Size(104, 25);
             this.lblFormato.TabIndex = 25;
             this.lblFormato.Text = "Formato :";
             this.lblFormato.Click += new System.EventHandler(this.label1_Click);
@@ -560,12 +560,12 @@
             // 
             this.cmbSeccion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSeccion.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSeccion.ForeColor = System.Drawing.Color.DimGray;
             this.cmbSeccion.FormattingEnabled = true;
             this.cmbSeccion.Location = new System.Drawing.Point(239, 289);
             this.cmbSeccion.Name = "cmbSeccion";
-            this.cmbSeccion.Size = new System.Drawing.Size(117, 25);
+            this.cmbSeccion.Size = new System.Drawing.Size(117, 28);
             this.cmbSeccion.TabIndex = 24;
             this.toolTip1.SetToolTip(this.cmbSeccion, "Es la localización del libro en la libreía.");
             this.cmbSeccion.SelectedIndexChanged += new System.EventHandler(this.cmbSeccion_SelectedIndexChanged);
@@ -574,12 +574,12 @@
             // 
             this.cmbExistencia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbExistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbExistencia.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbExistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbExistencia.ForeColor = System.Drawing.Color.DimGray;
             this.cmbExistencia.FormattingEnabled = true;
             this.cmbExistencia.Location = new System.Drawing.Point(63, 220);
             this.cmbExistencia.Name = "cmbExistencia";
-            this.cmbExistencia.Size = new System.Drawing.Size(155, 25);
+            this.cmbExistencia.Size = new System.Drawing.Size(155, 28);
             this.cmbExistencia.TabIndex = 23;
             this.cmbExistencia.SelectedIndexChanged += new System.EventHandler(this.cmbExistencia_SelectedIndexChanged);
             // 
@@ -587,12 +587,12 @@
             // 
             this.cmbGenero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbGenero.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGenero.ForeColor = System.Drawing.Color.DimGray;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(65, 289);
             this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(142, 25);
+            this.cmbGenero.Size = new System.Drawing.Size(142, 28);
             this.cmbGenero.TabIndex = 22;
             this.cmbGenero.SelectedIndexChanged += new System.EventHandler(this.cmbGenero_SelectedIndexChanged);
             this.cmbGenero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGenero_KeyPress);
@@ -600,50 +600,50 @@
             // lblSeccion
             // 
             this.lblSeccion.AutoSize = true;
-            this.lblSeccion.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeccion.Location = new System.Drawing.Point(238, 265);
             this.lblSeccion.Name = "lblSeccion";
-            this.lblSeccion.Size = new System.Drawing.Size(78, 21);
+            this.lblSeccion.Size = new System.Drawing.Size(103, 25);
             this.lblSeccion.TabIndex = 21;
             this.lblSeccion.Text = "Sección :";
             // 
             // lblExistencia
             // 
             this.lblExistencia.AutoSize = true;
-            this.lblExistencia.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExistencia.Location = new System.Drawing.Point(61, 196);
             this.lblExistencia.Name = "lblExistencia";
-            this.lblExistencia.Size = new System.Drawing.Size(157, 21);
+            this.lblExistencia.Size = new System.Drawing.Size(201, 25);
             this.lblExistencia.TabIndex = 19;
             this.lblExistencia.Text = "Tipo de existencia :";
             // 
             // lblGen
             // 
             this.lblGen.AutoSize = true;
-            this.lblGen.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGen.Location = new System.Drawing.Point(65, 265);
             this.lblGen.Name = "lblGen";
-            this.lblGen.Size = new System.Drawing.Size(75, 21);
+            this.lblGen.Size = new System.Drawing.Size(96, 25);
             this.lblGen.TabIndex = 17;
             this.lblGen.Text = "Genero :";
             // 
             // lblCantVen
             // 
             this.lblCantVen.AutoSize = true;
-            this.lblCantVen.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantVen.Location = new System.Drawing.Point(183, 120);
             this.lblCantVen.Name = "lblCantVen";
-            this.lblCantVen.Size = new System.Drawing.Size(170, 21);
+            this.lblCantVen.Size = new System.Drawing.Size(212, 25);
             this.lblCantVen.TabIndex = 15;
             this.lblCantVen.Text = "Cantidad de ventas :";
             // 
             // txtCantVen
             // 
-            this.txtCantVen.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantVen.ForeColor = System.Drawing.Color.DimGray;
             this.txtCantVen.Location = new System.Drawing.Point(187, 144);
             this.txtCantVen.Name = "txtCantVen";
-            this.txtCantVen.Size = new System.Drawing.Size(169, 27);
+            this.txtCantVen.Size = new System.Drawing.Size(169, 26);
             this.txtCantVen.TabIndex = 14;
             this.toolTip1.SetToolTip(this.txtCantVen, "La cantidad de ventas hechas del libro.\r\n*NOTA : Si se esta registrando un libro " +
         "esta debe ser 0.\r\n");
@@ -652,20 +652,20 @@
             // lblAutor
             // 
             this.lblAutor.AutoSize = true;
-            this.lblAutor.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAutor.Location = new System.Drawing.Point(65, 333);
             this.lblAutor.Name = "lblAutor";
-            this.lblAutor.Size = new System.Drawing.Size(146, 21);
+            this.lblAutor.Size = new System.Drawing.Size(176, 25);
             this.lblAutor.TabIndex = 13;
             this.lblAutor.Text = "Autor o Autores :";
             // 
             // txtAutor
             // 
-            this.txtAutor.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutor.ForeColor = System.Drawing.Color.DimGray;
             this.txtAutor.Location = new System.Drawing.Point(63, 357);
             this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(465, 27);
+            this.txtAutor.Size = new System.Drawing.Size(465, 26);
             this.txtAutor.TabIndex = 12;
             this.toolTip1.SetToolTip(this.txtAutor, "En caso de ser mas de un autor, se deben separar mediante comas \" , \".");
             this.txtAutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAutor_KeyPress);
@@ -673,40 +673,40 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.Location = new System.Drawing.Point(249, 196);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(67, 21);
+            this.lblPrecio.Size = new System.Drawing.Size(86, 25);
             this.lblPrecio.TabIndex = 11;
             this.lblPrecio.Text = "Precio :";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.ForeColor = System.Drawing.Color.DimGray;
             this.txtPrecio.Location = new System.Drawing.Point(394, 220);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(134, 27);
+            this.txtPrecio.Size = new System.Drawing.Size(134, 26);
             this.txtPrecio.TabIndex = 10;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblAnnPubli
             // 
             this.lblAnnPubli.AutoSize = true;
-            this.lblAnnPubli.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnnPubli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnnPubli.Location = new System.Drawing.Point(390, 196);
             this.lblAnnPubli.Name = "lblAnnPubli";
-            this.lblAnnPubli.Size = new System.Drawing.Size(166, 21);
+            this.lblAnnPubli.Size = new System.Drawing.Size(209, 25);
             this.lblAnnPubli.TabIndex = 9;
             this.lblAnnPubli.Text = "Año de publicación :";
             // 
             // txtAnnPubli
             // 
-            this.txtAnnPubli.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnnPubli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnnPubli.ForeColor = System.Drawing.Color.DimGray;
             this.txtAnnPubli.Location = new System.Drawing.Point(253, 218);
             this.txtAnnPubli.Name = "txtAnnPubli";
-            this.txtAnnPubli.Size = new System.Drawing.Size(103, 27);
+            this.txtAnnPubli.Size = new System.Drawing.Size(103, 26);
             this.txtAnnPubli.TabIndex = 8;
             this.toolTip1.SetToolTip(this.txtAnnPubli, "No se debe agregar el signo de pesos, pero ten en cuenta los decimales.\r\n");
             this.txtAnnPubli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnnPubli_KeyPress);
@@ -714,40 +714,40 @@
             // lblFechaAdd
             // 
             this.lblFechaAdd.AutoSize = true;
-            this.lblFechaAdd.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaAdd.Location = new System.Drawing.Point(390, 120);
             this.lblFechaAdd.Name = "lblFechaAdd";
-            this.lblFechaAdd.Size = new System.Drawing.Size(138, 21);
+            this.lblFechaAdd.Size = new System.Drawing.Size(178, 25);
             this.lblFechaAdd.TabIndex = 7;
             this.lblFechaAdd.Text = "Fecha de adició :";
             // 
             // lblCantidadDe
             // 
             this.lblCantidadDe.AutoSize = true;
-            this.lblCantidadDe.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadDe.Location = new System.Drawing.Point(60, 120);
             this.lblCantidadDe.Name = "lblCantidadDe";
-            this.lblCantidadDe.Size = new System.Drawing.Size(90, 21);
+            this.lblCantidadDe.Size = new System.Drawing.Size(112, 25);
             this.lblCantidadDe.TabIndex = 5;
             this.lblCantidadDe.Text = "Cantidad :";
             // 
             // lblNombreLibro
             // 
             this.lblNombreLibro.AutoSize = true;
-            this.lblNombreLibro.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreLibro.Location = new System.Drawing.Point(60, 58);
             this.lblNombreLibro.Name = "lblNombreLibro";
-            this.lblNombreLibro.Size = new System.Drawing.Size(147, 21);
+            this.lblNombreLibro.Size = new System.Drawing.Size(182, 25);
             this.lblNombreLibro.TabIndex = 4;
             this.lblNombreLibro.Text = "Nombre del libro :";
             // 
             // txtCantidadDe
             // 
-            this.txtCantidadDe.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidadDe.ForeColor = System.Drawing.Color.DimGray;
             this.txtCantidadDe.Location = new System.Drawing.Point(63, 145);
             this.txtCantidadDe.Name = "txtCantidadDe";
-            this.txtCantidadDe.Size = new System.Drawing.Size(87, 27);
+            this.txtCantidadDe.Size = new System.Drawing.Size(87, 26);
             this.txtCantidadDe.TabIndex = 3;
             this.toolTip1.SetToolTip(this.txtCantidadDe, "Es la cantidad que hay en el inventario de la librería.\r\n");
             this.txtCantidadDe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadDe_KeyPress);
@@ -755,12 +755,12 @@
             // cmbNombreLibros
             // 
             this.cmbNombreLibros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbNombreLibros.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNombreLibros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNombreLibros.ForeColor = System.Drawing.Color.DimGray;
             this.cmbNombreLibros.FormattingEnabled = true;
             this.cmbNombreLibros.Location = new System.Drawing.Point(64, 82);
             this.cmbNombreLibros.Name = "cmbNombreLibros";
-            this.cmbNombreLibros.Size = new System.Drawing.Size(464, 25);
+            this.cmbNombreLibros.Size = new System.Drawing.Size(464, 28);
             this.cmbNombreLibros.TabIndex = 2;
             this.toolTip1.SetToolTip(this.cmbNombreLibros, "Aquí se escribira o mostrara el nombre del libro.\r\n");
             this.cmbNombreLibros.SelectedIndexChanged += new System.EventHandler(this.NombreLibros_SelectedIndexChanged);
@@ -789,9 +789,9 @@
             this.tabPage1.Controls.Add(this.cmbAddFormatos);
             this.tabPage1.Controls.Add(this.cmbAddEditoriales);
             this.tabPage1.Controls.Add(this.cmbAddGeneros);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(602, 554);
+            this.tabPage1.Size = new System.Drawing.Size(624, 551);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Generos, Formatos y Editoriales";
             // 
@@ -876,10 +876,10 @@
             // lblEncabezado3erHoja
             // 
             this.lblEncabezado3erHoja.AutoSize = true;
-            this.lblEncabezado3erHoja.Font = new System.Drawing.Font("Nexa Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncabezado3erHoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEncabezado3erHoja.Location = new System.Drawing.Point(100, 14);
             this.lblEncabezado3erHoja.Name = "lblEncabezado3erHoja";
-            this.lblEncabezado3erHoja.Size = new System.Drawing.Size(409, 50);
+            this.lblEncabezado3erHoja.Size = new System.Drawing.Size(512, 58);
             this.lblEncabezado3erHoja.TabIndex = 15;
             this.lblEncabezado3erHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR \r\nELEMENTOS ADICIONALES\r\n";
             this.lblEncabezado3erHoja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -888,30 +888,30 @@
             // lblAddEditoriales
             // 
             this.lblAddEditoriales.AutoSize = true;
-            this.lblAddEditoriales.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddEditoriales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddEditoriales.Location = new System.Drawing.Point(78, 395);
             this.lblAddEditoriales.Name = "lblAddEditoriales";
-            this.lblAddEditoriales.Size = new System.Drawing.Size(102, 21);
+            this.lblAddEditoriales.Size = new System.Drawing.Size(126, 25);
             this.lblAddEditoriales.TabIndex = 14;
             this.lblAddEditoriales.Text = "Editoriales :";
             // 
             // lblAddFormatos
             // 
             this.lblAddFormatos.AutoSize = true;
-            this.lblAddFormatos.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddFormatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddFormatos.Location = new System.Drawing.Point(78, 246);
             this.lblAddFormatos.Name = "lblAddFormatos";
-            this.lblAddFormatos.Size = new System.Drawing.Size(95, 21);
+            this.lblAddFormatos.Size = new System.Drawing.Size(115, 25);
             this.lblAddFormatos.TabIndex = 13;
             this.lblAddFormatos.Text = "Formatos :";
             // 
             // lblAddGeneros
             // 
             this.lblAddGeneros.AutoSize = true;
-            this.lblAddGeneros.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddGeneros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddGeneros.Location = new System.Drawing.Point(78, 115);
             this.lblAddGeneros.Name = "lblAddGeneros";
-            this.lblAddGeneros.Size = new System.Drawing.Size(83, 21);
+            this.lblAddGeneros.Size = new System.Drawing.Size(107, 25);
             this.lblAddGeneros.TabIndex = 12;
             this.lblAddGeneros.Text = "Generos :";
             // 
@@ -919,7 +919,7 @@
             // 
             this.btnDelFormatos.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnDelFormatos.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDelFormatos.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelFormatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelFormatos.Location = new System.Drawing.Point(405, 311);
             this.btnDelFormatos.Name = "btnDelFormatos";
             this.btnDelFormatos.Size = new System.Drawing.Size(117, 42);
@@ -932,7 +932,7 @@
             // 
             this.btnAddFormatos.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnAddFormatos.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAddFormatos.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFormatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFormatos.Location = new System.Drawing.Point(405, 246);
             this.btnAddFormatos.Name = "btnAddFormatos";
             this.btnAddFormatos.Size = new System.Drawing.Size(117, 42);
@@ -945,7 +945,7 @@
             // 
             this.btnDelEditoriales.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnDelEditoriales.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDelEditoriales.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelEditoriales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelEditoriales.Location = new System.Drawing.Point(407, 460);
             this.btnDelEditoriales.Name = "btnDelEditoriales";
             this.btnDelEditoriales.Size = new System.Drawing.Size(115, 42);
@@ -958,7 +958,7 @@
             // 
             this.btnAddEditoriales.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnAddEditoriales.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAddEditoriales.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEditoriales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEditoriales.Location = new System.Drawing.Point(405, 395);
             this.btnAddEditoriales.Name = "btnAddEditoriales";
             this.btnAddEditoriales.Size = new System.Drawing.Size(117, 42);
@@ -971,7 +971,7 @@
             // 
             this.btnDelGeneros.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnDelGeneros.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDelGeneros.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelGeneros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelGeneros.Location = new System.Drawing.Point(405, 170);
             this.btnDelGeneros.Name = "btnDelGeneros";
             this.btnDelGeneros.Size = new System.Drawing.Size(117, 42);
@@ -984,7 +984,7 @@
             // 
             this.btnAddGeneros.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnAddGeneros.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAddGeneros.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddGeneros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddGeneros.Location = new System.Drawing.Point(405, 105);
             this.btnAddGeneros.Name = "btnAddGeneros";
             this.btnAddGeneros.Size = new System.Drawing.Size(117, 42);
@@ -999,7 +999,7 @@
             this.cmbAddFormatos.FormattingEnabled = true;
             this.cmbAddFormatos.Location = new System.Drawing.Point(82, 285);
             this.cmbAddFormatos.Name = "cmbAddFormatos";
-            this.cmbAddFormatos.Size = new System.Drawing.Size(242, 25);
+            this.cmbAddFormatos.Size = new System.Drawing.Size(242, 28);
             this.cmbAddFormatos.TabIndex = 2;
             this.toolTip1.SetToolTip(this.cmbAddFormatos, "Para añadir: Escribe el nombre del formato y después, dale al botón.\r\n\r\nPara elim" +
         "inar: Selecciona el formato y después, dale al botón.\r\n");
@@ -1012,7 +1012,7 @@
             this.cmbAddEditoriales.FormattingEnabled = true;
             this.cmbAddEditoriales.Location = new System.Drawing.Point(82, 437);
             this.cmbAddEditoriales.Name = "cmbAddEditoriales";
-            this.cmbAddEditoriales.Size = new System.Drawing.Size(242, 25);
+            this.cmbAddEditoriales.Size = new System.Drawing.Size(242, 28);
             this.cmbAddEditoriales.TabIndex = 1;
             this.toolTip1.SetToolTip(this.cmbAddEditoriales, "Para añadir: Escribe el nombre de la editorial y después, dale al botón.\r\n\r\nPara " +
         "eliminar: Selecciona la editorial y después, dale al botón.\r\n");
@@ -1025,7 +1025,7 @@
             this.cmbAddGeneros.FormattingEnabled = true;
             this.cmbAddGeneros.Location = new System.Drawing.Point(82, 150);
             this.cmbAddGeneros.Name = "cmbAddGeneros";
-            this.cmbAddGeneros.Size = new System.Drawing.Size(242, 25);
+            this.cmbAddGeneros.Size = new System.Drawing.Size(242, 28);
             this.cmbAddGeneros.TabIndex = 0;
             this.toolTip1.SetToolTip(this.cmbAddGeneros, "Para añadir: Escribe el nombre del genero y después, dale al botón.\r\n\r\nPara elimi" +
         "nar: Selecciona el genero y después, dale al botón.");
@@ -1034,7 +1034,7 @@
             // 
             // btnRefrescar
             // 
-            this.btnRefrescar.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefrescar.Location = new System.Drawing.Point(640, 525);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(91, 71);
@@ -1055,14 +1055,14 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(738, 606);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.tabControl1);
-            this.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
