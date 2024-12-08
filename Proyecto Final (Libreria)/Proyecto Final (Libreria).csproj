@@ -66,6 +66,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -82,7 +83,39 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fuentes\" />
-    <Folder Include="Icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\añadir-documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\archivo-de-edicion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\basura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\libro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\libro-circulo-flecha-derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\libro-circulo-flecha-izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\libro-cubierta-abierta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\libro-de-cuentos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\libro-medico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

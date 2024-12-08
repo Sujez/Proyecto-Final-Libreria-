@@ -876,6 +876,86 @@ namespace Proyecto_Final__Libreria_
                 return;
             }
         }
+
+        private void CONSULTAR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = 0;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = indiceActual;
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = cmbNombreLibros.SelectedIndex;
+
+                // Calcular el índice del siguiente elemento
+                int anteriorIndice = (indiceActual - 1 + cmbNombreLibros.Items.Count) % cmbNombreLibros.Items.Count;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = anteriorIndice;
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = cmbNombreLibros.SelectedIndex;
+
+                // Calcular el índice del siguiente elemento
+                int siguienteIndice = (indiceActual + 1) % cmbNombreLibros.Items.Count;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = siguienteIndice;
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = cmbNombreLibros.Items.Count - 1;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = indiceActual;
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+
         //====================================================================================================================
 
         private void btnAsignarEditorial_Click(object sender, EventArgs e)
