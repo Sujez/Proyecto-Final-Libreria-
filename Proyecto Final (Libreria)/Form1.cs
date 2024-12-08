@@ -14,6 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Media;
 
 namespace Proyecto_Final__Libreria_
 {
@@ -876,6 +877,97 @@ namespace Proyecto_Final__Libreria_
                 return;
             }
         }
+
+        private void CONSULTAR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = 0;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = indiceActual;
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = cmbNombreLibros.SelectedIndex;
+
+                // Calcular el índice del siguiente elemento
+                int anteriorIndice = (indiceActual - 1 + cmbNombreLibros.Items.Count) % cmbNombreLibros.Items.Count;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = anteriorIndice;
+
+                //Efecto de sonido
+                SoundPlayer Pagina = new SoundPlayer();
+                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.Play();
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = cmbNombreLibros.SelectedIndex;
+
+                // Calcular el índice del siguiente elemento
+                int siguienteIndice = (indiceActual + 1) % cmbNombreLibros.Items.Count;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = siguienteIndice;
+
+                //Efecto de sonido
+                SoundPlayer Pagina = new SoundPlayer();
+                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.Play();
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = cmbNombreLibros.Items.Count - 1;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = indiceActual;
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+
         //====================================================================================================================
 
         private void btnAsignarEditorial_Click(object sender, EventArgs e)
@@ -1126,13 +1218,18 @@ namespace Proyecto_Final__Libreria_
                     int secFormato = int.Parse(formato);
                     string valorFormato = datosFormato[secFormato];
                     cmbFormato.Text = valorFormato;
+                    if (cmbFormato.Text == "")
+                    {
+                        MessageBox.Show("Formato inexistente");
+                    }
                     //===================================================================
+                    
                     conexion.Close();
                 }
             }
             catch
             {
-                MessageBox.Show("No hay elementos para cargar, favor de ingresar algunos");
+                MessageBox.Show("Hubo un error por datos inexistentes, favor de revisar");
             }
             
         }
