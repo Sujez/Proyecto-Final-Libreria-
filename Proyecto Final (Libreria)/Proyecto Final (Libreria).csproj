@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fuentes\" />
+    <Folder Include="Sonidos\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\añadir-documento.png" />
@@ -116,6 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\libro-medico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Fondo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,6 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Media;
 
 namespace Proyecto_Final__Libreria_
 {
@@ -912,6 +913,11 @@ namespace Proyecto_Final__Libreria_
 
                 // Seleccionar el siguiente elemento
                 cmbNombreLibros.SelectedIndex = anteriorIndice;
+
+                //Efecto de sonido
+                SoundPlayer Pagina = new SoundPlayer();
+                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.Play();
             }
             else
             {
@@ -932,11 +938,17 @@ namespace Proyecto_Final__Libreria_
 
                 // Seleccionar el siguiente elemento
                 cmbNombreLibros.SelectedIndex = siguienteIndice;
+
+                //Efecto de sonido
+                SoundPlayer Pagina = new SoundPlayer();
+                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.Play();
             }
             else
             {
                 MessageBox.Show("El ComboBox está vacío.");
             }
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
