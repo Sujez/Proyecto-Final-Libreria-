@@ -643,7 +643,9 @@ namespace Proyecto_Final__Libreria_
 
                 //Mensaje en caso de exito
                 MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
+
                 conexion.Close();
+                limpiarCampos();
             }
             catch
             {
@@ -752,6 +754,7 @@ namespace Proyecto_Final__Libreria_
                 CargarFormato();
                 CargarEditoriales();
                 cargarEditorialesAsignadas();
+                limpiarCampos();
             }
             catch
             {
@@ -1053,10 +1056,10 @@ namespace Proyecto_Final__Libreria_
             calendarioB.Text = "";
             txtPrecio.Text = "";
             txtCantVen.Text = "";
-            cmbGenero.Text = "";
-            cmbExistencia.Text = "";
-            cmbSeccion.Text = "";
-            cmbFormato.Text = "";
+            cmbGenero.SelectedIndex = -1;
+            cmbExistencia.SelectedIndex = -1;
+            cmbSeccion.SelectedIndex = -1;
+            cmbFormato.SelectedIndex = -1;
         } 
 
         //PROCESO PARA ACTUALIZAR LOS DATOS AUTOMATICAMENTE AL CAMBIAR DE ELEMENTO EN LA SECCION DE CONSULTA
