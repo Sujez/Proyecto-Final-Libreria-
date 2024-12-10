@@ -106,6 +106,8 @@
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.AGREGAR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -154,7 +156,7 @@
             this.AGREGAR.Location = new System.Drawing.Point(4, 32);
             this.AGREGAR.Name = "AGREGAR";
             this.AGREGAR.Padding = new System.Windows.Forms.Padding(3);
-            this.AGREGAR.Size = new System.Drawing.Size(624, 551);
+            this.AGREGAR.Size = new System.Drawing.Size(602, 595);
             this.AGREGAR.TabIndex = 0;
             this.AGREGAR.Text = "Editoriales de un Libro";
             // 
@@ -313,12 +315,13 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(610, 587);
+            this.tabControl1.Size = new System.Drawing.Size(610, 631);
             this.tabControl1.TabIndex = 1;
             // 
             // CONSULTAR
             // 
             this.CONSULTAR.BackColor = System.Drawing.Color.Gainsboro;
+            this.CONSULTAR.Controls.Add(this.textBox1);
             this.CONSULTAR.Controls.Add(this.pictureBox10);
             this.CONSULTAR.Controls.Add(this.pictureBox8);
             this.CONSULTAR.Controls.Add(this.pictureBox7);
@@ -358,7 +361,7 @@
             this.CONSULTAR.Location = new System.Drawing.Point(4, 32);
             this.CONSULTAR.Name = "CONSULTAR";
             this.CONSULTAR.Padding = new System.Windows.Forms.Padding(3);
-            this.CONSULTAR.Size = new System.Drawing.Size(602, 551);
+            this.CONSULTAR.Size = new System.Drawing.Size(602, 595);
             this.CONSULTAR.TabIndex = 1;
             this.CONSULTAR.Text = "Consulta y Modificación general";
             this.CONSULTAR.Click += new System.EventHandler(this.CONSULTAR_Click);
@@ -366,7 +369,7 @@
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.White;
-            this.pictureBox10.Location = new System.Drawing.Point(63, 399);
+            this.pictureBox10.Location = new System.Drawing.Point(63, 438);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(467, 3);
             this.pictureBox10.TabIndex = 46;
@@ -375,7 +378,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Proyecto_Final__Libreria_.Properties.Resources.archivo_de_edicion;
-            this.pictureBox8.Location = new System.Drawing.Point(389, 495);
+            this.pictureBox8.Location = new System.Drawing.Point(389, 534);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(35, 42);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -385,7 +388,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Proyecto_Final__Libreria_.Properties.Resources.basura;
-            this.pictureBox7.Location = new System.Drawing.Point(232, 495);
+            this.pictureBox7.Location = new System.Drawing.Point(232, 534);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 42);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -395,7 +398,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_medico;
-            this.pictureBox6.Location = new System.Drawing.Point(69, 495);
+            this.pictureBox6.Location = new System.Drawing.Point(69, 534);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(35, 42);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -406,7 +409,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Proyecto_Final__Libreria_.Properties.Resources.izquierda;
-            this.pictureBox3.Location = new System.Drawing.Point(201, 427);
+            this.pictureBox3.Location = new System.Drawing.Point(201, 466);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(36, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -419,7 +422,7 @@
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_circulo_flecha_derecha;
-            this.pictureBox5.Location = new System.Drawing.Point(408, 421);
+            this.pictureBox5.Location = new System.Drawing.Point(408, 460);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(47, 44);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -432,7 +435,7 @@
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::Proyecto_Final__Libreria_.Properties.Resources.derecha;
-            this.pictureBox4.Location = new System.Drawing.Point(346, 427);
+            this.pictureBox4.Location = new System.Drawing.Point(346, 466);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(36, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -444,7 +447,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_cubierta_abierta;
-            this.pictureBox2.Location = new System.Drawing.Point(269, 421);
+            this.pictureBox2.Location = new System.Drawing.Point(269, 460);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 44);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -455,7 +458,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_circulo_flecha_izquierda;
-            this.pictureBox1.Location = new System.Drawing.Point(127, 421);
+            this.pictureBox1.Location = new System.Drawing.Point(127, 460);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -480,7 +483,7 @@
             this.btnInsertar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.Location = new System.Drawing.Point(110, 495);
+            this.btnInsertar.Location = new System.Drawing.Point(110, 534);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(91, 44);
             this.btnInsertar.TabIndex = 35;
@@ -494,7 +497,7 @@
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(273, 495);
+            this.btnEliminar.Location = new System.Drawing.Point(273, 534);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(86, 44);
             this.btnEliminar.TabIndex = 34;
@@ -510,7 +513,7 @@
             this.calendarioB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calendarioB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarioB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.calendarioB.Location = new System.Drawing.Point(394, 145);
+            this.calendarioB.Location = new System.Drawing.Point(394, 184);
             this.calendarioB.Name = "calendarioB";
             this.calendarioB.Size = new System.Drawing.Size(134, 26);
             this.calendarioB.TabIndex = 33;
@@ -522,7 +525,7 @@
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(430, 495);
+            this.btnModificar.Location = new System.Drawing.Point(430, 534);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(88, 44);
             this.btnModificar.TabIndex = 32;
@@ -539,7 +542,7 @@
             this.cmbFormato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFormato.ForeColor = System.Drawing.Color.DimGray;
             this.cmbFormato.FormattingEnabled = true;
-            this.cmbFormato.Location = new System.Drawing.Point(392, 289);
+            this.cmbFormato.Location = new System.Drawing.Point(392, 328);
             this.cmbFormato.Name = "cmbFormato";
             this.cmbFormato.Size = new System.Drawing.Size(136, 28);
             this.cmbFormato.TabIndex = 26;
@@ -549,7 +552,7 @@
             // 
             this.lblFormato.AutoSize = true;
             this.lblFormato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormato.Location = new System.Drawing.Point(390, 265);
+            this.lblFormato.Location = new System.Drawing.Point(390, 304);
             this.lblFormato.Name = "lblFormato";
             this.lblFormato.Size = new System.Drawing.Size(104, 25);
             this.lblFormato.TabIndex = 25;
@@ -563,7 +566,7 @@
             this.cmbSeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSeccion.ForeColor = System.Drawing.Color.DimGray;
             this.cmbSeccion.FormattingEnabled = true;
-            this.cmbSeccion.Location = new System.Drawing.Point(239, 289);
+            this.cmbSeccion.Location = new System.Drawing.Point(239, 328);
             this.cmbSeccion.Name = "cmbSeccion";
             this.cmbSeccion.Size = new System.Drawing.Size(117, 28);
             this.cmbSeccion.TabIndex = 24;
@@ -577,7 +580,7 @@
             this.cmbExistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbExistencia.ForeColor = System.Drawing.Color.DimGray;
             this.cmbExistencia.FormattingEnabled = true;
-            this.cmbExistencia.Location = new System.Drawing.Point(63, 220);
+            this.cmbExistencia.Location = new System.Drawing.Point(63, 259);
             this.cmbExistencia.Name = "cmbExistencia";
             this.cmbExistencia.Size = new System.Drawing.Size(155, 28);
             this.cmbExistencia.TabIndex = 23;
@@ -590,7 +593,7 @@
             this.cmbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGenero.ForeColor = System.Drawing.Color.DimGray;
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(65, 289);
+            this.cmbGenero.Location = new System.Drawing.Point(65, 328);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(142, 28);
             this.cmbGenero.TabIndex = 22;
@@ -601,7 +604,7 @@
             // 
             this.lblSeccion.AutoSize = true;
             this.lblSeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeccion.Location = new System.Drawing.Point(238, 265);
+            this.lblSeccion.Location = new System.Drawing.Point(238, 304);
             this.lblSeccion.Name = "lblSeccion";
             this.lblSeccion.Size = new System.Drawing.Size(103, 25);
             this.lblSeccion.TabIndex = 21;
@@ -611,7 +614,7 @@
             // 
             this.lblExistencia.AutoSize = true;
             this.lblExistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExistencia.Location = new System.Drawing.Point(61, 196);
+            this.lblExistencia.Location = new System.Drawing.Point(61, 235);
             this.lblExistencia.Name = "lblExistencia";
             this.lblExistencia.Size = new System.Drawing.Size(201, 25);
             this.lblExistencia.TabIndex = 19;
@@ -621,7 +624,7 @@
             // 
             this.lblGen.AutoSize = true;
             this.lblGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGen.Location = new System.Drawing.Point(65, 265);
+            this.lblGen.Location = new System.Drawing.Point(65, 304);
             this.lblGen.Name = "lblGen";
             this.lblGen.Size = new System.Drawing.Size(96, 25);
             this.lblGen.TabIndex = 17;
@@ -631,7 +634,7 @@
             // 
             this.lblCantVen.AutoSize = true;
             this.lblCantVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantVen.Location = new System.Drawing.Point(183, 120);
+            this.lblCantVen.Location = new System.Drawing.Point(183, 159);
             this.lblCantVen.Name = "lblCantVen";
             this.lblCantVen.Size = new System.Drawing.Size(212, 25);
             this.lblCantVen.TabIndex = 15;
@@ -641,7 +644,7 @@
             // 
             this.txtCantVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantVen.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCantVen.Location = new System.Drawing.Point(187, 144);
+            this.txtCantVen.Location = new System.Drawing.Point(187, 183);
             this.txtCantVen.Name = "txtCantVen";
             this.txtCantVen.Size = new System.Drawing.Size(169, 26);
             this.txtCantVen.TabIndex = 14;
@@ -653,7 +656,7 @@
             // 
             this.lblAutor.AutoSize = true;
             this.lblAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAutor.Location = new System.Drawing.Point(65, 333);
+            this.lblAutor.Location = new System.Drawing.Point(65, 372);
             this.lblAutor.Name = "lblAutor";
             this.lblAutor.Size = new System.Drawing.Size(176, 25);
             this.lblAutor.TabIndex = 13;
@@ -663,7 +666,7 @@
             // 
             this.txtAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutor.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAutor.Location = new System.Drawing.Point(63, 357);
+            this.txtAutor.Location = new System.Drawing.Point(63, 396);
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.Size = new System.Drawing.Size(465, 26);
             this.txtAutor.TabIndex = 12;
@@ -674,7 +677,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(249, 196);
+            this.lblPrecio.Location = new System.Drawing.Point(249, 235);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(86, 25);
             this.lblPrecio.TabIndex = 11;
@@ -684,7 +687,7 @@
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPrecio.Location = new System.Drawing.Point(394, 220);
+            this.txtPrecio.Location = new System.Drawing.Point(394, 259);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(134, 26);
             this.txtPrecio.TabIndex = 10;
@@ -694,7 +697,7 @@
             // 
             this.lblAnnPubli.AutoSize = true;
             this.lblAnnPubli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnPubli.Location = new System.Drawing.Point(390, 196);
+            this.lblAnnPubli.Location = new System.Drawing.Point(390, 235);
             this.lblAnnPubli.Name = "lblAnnPubli";
             this.lblAnnPubli.Size = new System.Drawing.Size(209, 25);
             this.lblAnnPubli.TabIndex = 9;
@@ -704,7 +707,7 @@
             // 
             this.txtAnnPubli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnnPubli.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAnnPubli.Location = new System.Drawing.Point(253, 218);
+            this.txtAnnPubli.Location = new System.Drawing.Point(253, 257);
             this.txtAnnPubli.Name = "txtAnnPubli";
             this.txtAnnPubli.Size = new System.Drawing.Size(103, 26);
             this.txtAnnPubli.TabIndex = 8;
@@ -715,7 +718,7 @@
             // 
             this.lblFechaAdd.AutoSize = true;
             this.lblFechaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaAdd.Location = new System.Drawing.Point(390, 120);
+            this.lblFechaAdd.Location = new System.Drawing.Point(390, 159);
             this.lblFechaAdd.Name = "lblFechaAdd";
             this.lblFechaAdd.Size = new System.Drawing.Size(178, 25);
             this.lblFechaAdd.TabIndex = 7;
@@ -725,7 +728,7 @@
             // 
             this.lblCantidadDe.AutoSize = true;
             this.lblCantidadDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadDe.Location = new System.Drawing.Point(60, 120);
+            this.lblCantidadDe.Location = new System.Drawing.Point(60, 159);
             this.lblCantidadDe.Name = "lblCantidadDe";
             this.lblCantidadDe.Size = new System.Drawing.Size(112, 25);
             this.lblCantidadDe.TabIndex = 5;
@@ -735,7 +738,7 @@
             // 
             this.lblNombreLibro.AutoSize = true;
             this.lblNombreLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreLibro.Location = new System.Drawing.Point(60, 58);
+            this.lblNombreLibro.Location = new System.Drawing.Point(60, 97);
             this.lblNombreLibro.Name = "lblNombreLibro";
             this.lblNombreLibro.Size = new System.Drawing.Size(182, 25);
             this.lblNombreLibro.TabIndex = 4;
@@ -745,7 +748,7 @@
             // 
             this.txtCantidadDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidadDe.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCantidadDe.Location = new System.Drawing.Point(63, 145);
+            this.txtCantidadDe.Location = new System.Drawing.Point(63, 184);
             this.txtCantidadDe.Name = "txtCantidadDe";
             this.txtCantidadDe.Size = new System.Drawing.Size(87, 26);
             this.txtCantidadDe.TabIndex = 3;
@@ -758,7 +761,7 @@
             this.cmbNombreLibros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNombreLibros.ForeColor = System.Drawing.Color.DimGray;
             this.cmbNombreLibros.FormattingEnabled = true;
-            this.cmbNombreLibros.Location = new System.Drawing.Point(64, 82);
+            this.cmbNombreLibros.Location = new System.Drawing.Point(64, 121);
             this.cmbNombreLibros.Name = "cmbNombreLibros";
             this.cmbNombreLibros.Size = new System.Drawing.Size(464, 28);
             this.cmbNombreLibros.TabIndex = 2;
@@ -791,7 +794,7 @@
             this.tabPage1.Controls.Add(this.cmbAddGeneros);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(624, 551);
+            this.tabPage1.Size = new System.Drawing.Size(602, 595);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Generos, Formatos y Editoriales";
             // 
@@ -1035,7 +1038,7 @@
             // btnRefrescar
             // 
             this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.Location = new System.Drawing.Point(640, 525);
+            this.btnRefrescar.Location = new System.Drawing.Point(635, 566);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(91, 71);
             this.btnRefrescar.TabIndex = 36;
@@ -1046,19 +1049,41 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_de_cuentos;
-            this.pictureBox9.Location = new System.Drawing.Point(650, 451);
+            this.pictureBox9.Location = new System.Drawing.Point(645, 492);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(71, 68);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 46;
             this.pictureBox9.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox1.Location = new System.Drawing.Point(63, 63);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(467, 26);
+            this.textBox1.TabIndex = 48;
+            this.toolTip1.SetToolTip(this.textBox1, "Es la cantidad que hay en el inventario de la librería.\r\n");
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.Location = new System.Drawing.Point(634, 13);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(91, 71);
+            this.btnAyuda.TabIndex = 47;
+            this.btnAyuda.Text = "Manual de usuario";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(738, 606);
+            this.ClientSize = new System.Drawing.Size(738, 653);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.tabControl1);
@@ -1180,6 +1205,8 @@
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }
 
