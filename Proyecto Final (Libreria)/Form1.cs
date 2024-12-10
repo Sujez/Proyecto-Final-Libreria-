@@ -996,6 +996,41 @@ namespace Proyecto_Final__Libreria_
             forms2.Show();
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            
+            //Se guarda el texto referente al libro buscado
+            string libroBuscado = txtBusqueda.Text;
+
+            //Usamos FirstOrDefault para encontrar la primera pareja clave-valor (KeyValuePair<int, string>)
+            //donde el valor coincide con el texto buscado
+            //En caso de que se encuentre alguna coincidencia dentro de los parametros, devuelve su id
+            //Si no encuentra una coinicidencia, regresa "null" ya que "int?" acepta nulos (devolveria un 0 en caso de ser solo int
+            int? idEncontrado = datosLibro.FirstOrDefault(kv => kv.Value == libroBuscado).Key;
+
+            //Se evalua si "idEncontrado" tiene valor asignado
+            if (idEncontrado.HasValue && idEncontrado != 0)
+            {
+                int indice = idEncontrado.Value;
+                
+                if (datosLibro.TryGetValue(indice, out string valor))
+                {
+                    cmbNombreLibros.Text = valor;
+                }
+            }
+            else
+            {
+                
+                // Mostrar mensaje si no se encuentra el texto
+                MessageBox.Show("Libro no encontrado, intenta nuevamente");
+            }
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //====================================================================================================================
 
         private void btnAsignarEditorial_Click(object sender, EventArgs e)
