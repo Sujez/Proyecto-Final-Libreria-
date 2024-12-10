@@ -93,6 +93,16 @@ namespace Proyecto_Final__Libreria_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buscar_alt {
+            get {
+                object obj = ResourceManager.GetObject("buscar-alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap derecha {
             get {
                 object obj = ResourceManager.GetObject("derecha", resourceCulture);
@@ -116,6 +126,56 @@ namespace Proyecto_Final__Libreria_.Properties {
         internal static System.Drawing.Bitmap Fondo1 {
             get {
                 object obj = ResourceManager.GetObject("Fondo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hoja1 {
+            get {
+                object obj = ResourceManager.GetObject("Hoja1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hoja2 {
+            get {
+                object obj = ResourceManager.GetObject("Hoja2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hoja3 {
+            get {
+                object obj = ResourceManager.GetObject("Hoja3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hoja4 {
+            get {
+                object obj = ResourceManager.GetObject("Hoja4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hoja5 {
+            get {
+                object obj = ResourceManager.GetObject("Hoja5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

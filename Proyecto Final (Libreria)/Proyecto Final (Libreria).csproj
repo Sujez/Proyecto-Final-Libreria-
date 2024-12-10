@@ -133,5 +133,23 @@
   <ItemGroup>
     <None Include="Icons\Fondo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\buscar-alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Instrucciones\Hoja1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Instrucciones\Hoja2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Instrucciones\Hoja3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Instrucciones\Hoja4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Instrucciones\Hoja5.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

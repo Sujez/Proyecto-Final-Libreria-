@@ -34,7 +34,10 @@ namespace Proyecto_Final__Libreria_
         Dictionary<int, string> datosEditoriales = new Dictionary<int, string>();
 
         //CAMBIAR EL DATA SOURCE PARA QUE LA BASE DE DATOS SE CONECTE A LA BD DE LA COMPU
-        string connectionString = "Data Source=DESKTOP-BF3NJMJ;Initial Catalog=BD_LIBRERIA; Integrated Security=True";
+        string connectionString = "Data Source=LAPTOP-FVNNPBGP;Initial Catalog=BD_LIBRERIA; Integrated Security=True";
+
+        // Computadora de Sandra : LAPTOP-FVNNPBGP
+        // Computadora de Jesus : DESKTOP-BF3NJMJ
 
         public Form1()
         {
@@ -937,7 +940,9 @@ namespace Proyecto_Final__Libreria_
 
                 //Efecto de sonido
                 SoundPlayer Pagina = new SoundPlayer();
-                Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                //Ruta de Sandra:
+                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                //Ruta de Jesus: Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
                 Pagina.Play();
             }
             else
@@ -962,7 +967,9 @@ namespace Proyecto_Final__Libreria_
 
                 //Efecto de sonido
                 SoundPlayer Pagina = new SoundPlayer();
-                Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                //Ruta de Sandra:
+                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                //Ruta de Jesus: Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
                 Pagina.Play();
             }
             else
@@ -999,6 +1006,16 @@ namespace Proyecto_Final__Libreria_
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             
+           
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox23_Click(object sender, EventArgs e)
+        {
             //Se guarda el texto referente al libro buscado
             string libroBuscado = txtBusqueda.Text;
 
@@ -1012,7 +1029,7 @@ namespace Proyecto_Final__Libreria_
             if (idEncontrado.HasValue && idEncontrado != 0)
             {
                 int indice = idEncontrado.Value;
-                
+
                 if (datosLibro.TryGetValue(indice, out string valor))
                 {
                     cmbNombreLibros.Text = valor;
@@ -1020,15 +1037,10 @@ namespace Proyecto_Final__Libreria_
             }
             else
             {
-                
+
                 // Mostrar mensaje si no se encuentra el texto
                 MessageBox.Show("Libro no encontrado, intenta nuevamente");
             }
-        }
-
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         //====================================================================================================================

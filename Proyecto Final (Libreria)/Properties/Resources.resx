@@ -133,6 +133,9 @@
   <data name="Fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\Fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buscar-alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\buscar-alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="libro-de-cuentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\libro-de-cuentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,10 +157,25 @@
   <data name="libro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\libro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="añadir-documento" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\añadir-documento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\Fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hoja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Instrucciones\Hoja1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hoja2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Instrucciones\Hoja2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hoja3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Instrucciones\Hoja3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hoja4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Instrucciones\Hoja4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hoja5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Instrucciones\Hoja5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
