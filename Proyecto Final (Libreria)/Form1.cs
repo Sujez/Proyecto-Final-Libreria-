@@ -34,7 +34,7 @@ namespace Proyecto_Final__Libreria_
         Dictionary<int, string> datosEditoriales = new Dictionary<int, string>();
 
         //CAMBIAR EL DATA SOURCE PARA QUE LA BASE DE DATOS SE CONECTE A LA BD DE LA COMPU
-        string connectionString = "Data Source=LAPTOP-FVNNPBGP;Initial Catalog=BD_LIBRERIA; Integrated Security=True";
+        string connectionString = "Data Source=DESKTOP-BF3NJMJ;Initial Catalog=BD_LIBRERIA; Integrated Security=True";
 
         // Computadora de Sandra : LAPTOP-FVNNPBGP
         // Computadora de Jesus : DESKTOP-BF3NJMJ
@@ -968,8 +968,9 @@ namespace Proyecto_Final__Libreria_
                 //Efecto de sonido
                 SoundPlayer Pagina = new SoundPlayer();
                 //Ruta de Sandra:
-                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
-                //Ruta de Jesus: Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                //Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                //Ruta de Jesus:
+                Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
                 Pagina.Play();
             }
             else
