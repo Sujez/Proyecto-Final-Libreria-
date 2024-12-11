@@ -70,10 +70,6 @@ namespace Proyecto_Final__Libreria_
             cmbAddEditoriales.SelectedIndex = -1;
         }
 
-
-
-
-
         //METODOS PARA CARGAR AUTMATICAMENTE LOS COMBOBOX
         //========================================================================================================
         
@@ -135,15 +131,6 @@ namespace Proyecto_Final__Libreria_
                         //NOTA: CAMBIAR EL NOMBRE DEL OBJETO
                         datosLibro.Add(id, nombre);
                     }
-
-                    /*
-                     * UTILIZANDO LA PROPIEDAD DATA SOURCE se impide poder actualizar los datos
-                    // Asignar los datos al ComboBox
-                    //NOTA: CAMBIAR EL NOMBRE DE LOS COMBOBOX
-                    cmbNombreLibros.DataSource = new BindingSource(datosLibro, null);
-                    cmbNombreLibros.DisplayMember = "Value"; // Lo que se muestra al usuario
-                    cmbNombreLibros.ValueMember = "Key";    // La ID asociada
-                    */
                     
                     // Llena el ComboBox manualmente sin usar DataSource
                     cmbNombreLibros.Items.Clear(); // Limpia el ComboBox antes de llenarlo
@@ -462,8 +449,6 @@ namespace Proyecto_Final__Libreria_
 
 
         }
-
-
         private void cargarEditorialesAsignadas()
         {
             SqlConnection conexion = new SqlConnection(connectionString);
@@ -515,7 +500,6 @@ namespace Proyecto_Final__Libreria_
                 conexion.Close();
             }
         }
-
         private void cmbEditorialesAsignadas_SelectedIndexChanged(object sender, EventArgs e)
         {
             string valorBuscado = cmbEditorialesAsignadas.Text;
@@ -712,32 +696,58 @@ namespace Proyecto_Final__Libreria_
             {
                 SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
+                
                 string nombre = cmbNombreLibros.Text;
 
+                Random random = new Random();
+
+                // Obtener un número entero aleatorio entre 0 (incluido) y 100 (excluido)
+                int numeroAleatorio = random.Next(0, 1000);
+
+                Random randomL = new Random();
+
+                // Generar un número aleatorio correspondiente a letras minúsculas (a-z)
+                char letraAleatoria = (char)random.Next('a', 'z' + 1);
+
                 // Consulta SQL para verificar si el dato existe
-                string query = "SELECT COUNT(*) FROM INVENTARIO WHERE Nombre_Libro = @nombre";
+                string query = "SELECT COUNT(*) FROM INVENTARIO WHERE Nombre_Libro = @nombre and visible = 1";
                 SqlCommand command = new SqlCommand(query, conexion);
                 command.Parameters.AddWithValue("@nombre", nombre);
 
                 // Ejecutar la consulta
                 int count = (int)command.ExecuteScalar();
 
+                //PROCESO PARA CAMBIAR EL FORMATO DE LA FECHA Y PODER ENVIARLO A LA BASE DE DATOS
+
+                string fechaOriginal = calendarioB.Text;
+
+                // Convertir la cadena a un objeto DateTime
+                DateTime fechaConvertida = DateTime.ParseExact(fechaOriginal, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+                // Formatear la fecha al nuevo formato "yyyy-MM-dd"
+                string fechaNueva = fechaConvertida.ToString("yyyy-MM-dd");
                 if (count == 0)
                 {
-                    //PROCESO PARA CAMBIAR EL FORMATO DE LA FECHA Y PODER ENVIARLO A LA BASE DE DATOS
-
-                    string fechaOriginal = calendarioB.Text;
-
-                    // Convertir la cadena a un objeto DateTime
-                    DateTime fechaConvertida = DateTime.ParseExact(fechaOriginal, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
-                    // Formatear la fecha al nuevo formato "yyyy-MM-dd"
-                    string fechaNueva = fechaConvertida.ToString("yyyy-MM-dd");
 
                     //Comando para insertar un registro
                     SqlCommand cmd = new SqlCommand("insert into INVENTARIO([Nombre_Libro], [Cantidad_Libros], [Fecha_Adicion], " +
                         "[Ann_Publicacion], [Precio], [Autor], [Cantidad_Vendida], [ID_Genero], [ID_Existencia],[ID_Seccion], " +
-                        "[ID_Formato],[Visible]) values('" + this.cmbNombreLibros.Text + "', " + Convert.ToInt32(this.txtCantidadDe.Text) +
+                        "[ID_Formato],[Visible]) values('" + this.cmbNombreLibros.Text +"', " + Convert.ToInt32(this.txtCantidadDe.Text) +
+                        ", '" + fechaNueva + "', " + Convert.ToInt32(this.txtAnnPubli.Text) + ", " + Convert.ToDecimal(this.txtPrecio.Text) + ", '" +
+                        this.txtAutor.Text + "', " + Convert.ToInt32(this.txtCantVen.Text) + ", " + idgenero + ", " + idExistenciaB +
+                        ", " + idSeccion + ", " + idFormato + ", " + 1 + ")", conexion);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
+                
+            
+                }
+                else
+                {
+                    //Comando para insertar un registro
+                    SqlCommand cmd = new SqlCommand("insert into INVENTARIO([Nombre_Libro], [Cantidad_Libros], [Fecha_Adicion], " +
+                        "[Ann_Publicacion], [Precio], [Autor], [Cantidad_Vendida], [ID_Genero], [ID_Existencia],[ID_Seccion], " +
+                        "[ID_Formato],[Visible]) values('" + this.cmbNombreLibros.Text + " #" + numeroAleatorio.ToString() + letraAleatoria +"', " + Convert.ToInt32(this.txtCantidadDe.Text) +
                         ", '" + fechaNueva + "', " + Convert.ToInt32(this.txtAnnPubli.Text) + ", " + Convert.ToDecimal(this.txtPrecio.Text) + ", '" +
                         this.txtAutor.Text + "', " + Convert.ToInt32(this.txtCantVen.Text) + ", " + idgenero + ", " + idExistenciaB +
                         ", " + idSeccion + ", " + idFormato + ", " + 1 + ")", conexion);
@@ -745,10 +755,7 @@ namespace Proyecto_Final__Libreria_
 
                     MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
                 }
-                else
-                {
-                    MessageBox.Show("El nombre del libro ingresado ya existe o existio, favor de ingresar otro");
-                }
+            
                 conexion.Close();
 
                 limpiarCampos();
@@ -816,7 +823,6 @@ namespace Proyecto_Final__Libreria_
                 MessageBox.Show("Ha ocurrido un problema inesperado");
             }
         }
-
         private void label1_Click_1(object sender, EventArgs e)
         {
 
@@ -901,12 +907,10 @@ namespace Proyecto_Final__Libreria_
                 return;
             }
         }
-
         private void CONSULTAR_Click(object sender, EventArgs e)
         {
 
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             // Si hay elementos en el ComboBox
@@ -923,7 +927,6 @@ namespace Proyecto_Final__Libreria_
                 MessageBox.Show("El ComboBox está vacío.");
             }
         }
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             // Si hay elementos en el ComboBox
@@ -941,8 +944,8 @@ namespace Proyecto_Final__Libreria_
                 //Efecto de sonido
                 SoundPlayer Pagina = new SoundPlayer();
                 //Ruta de Sandra:
-                Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
-                //Ruta de Jesus: Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                //Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
                 Pagina.Play();
             }
             else
@@ -950,7 +953,6 @@ namespace Proyecto_Final__Libreria_
                 MessageBox.Show("El ComboBox está vacío.");
             }
         }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             // Si hay elementos en el ComboBox
@@ -979,7 +981,6 @@ namespace Proyecto_Final__Libreria_
             }
 
         }
-
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             // Si hay elementos en el ComboBox
