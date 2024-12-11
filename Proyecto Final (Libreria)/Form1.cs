@@ -14,6 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Media;
 
 namespace Proyecto_Final__Libreria_
 {
@@ -34,6 +35,9 @@ namespace Proyecto_Final__Libreria_
 
         //CAMBIAR EL DATA SOURCE PARA QUE LA BASE DE DATOS SE CONECTE A LA BD DE LA COMPU
         string connectionString = "Data Source=DESKTOP-BF3NJMJ;Initial Catalog=BD_LIBRERIA; Integrated Security=True";
+
+        // Computadora de Sandra : LAPTOP-FVNNPBGP
+        // Computadora de Jesus : DESKTOP-BF3NJMJ
 
         public Form1()
         {
@@ -65,10 +69,6 @@ namespace Proyecto_Final__Libreria_
             cmbExistencia.SelectedIndex = -1;
             cmbAddEditoriales.SelectedIndex = -1;
         }
-
-
-
-
 
         //METODOS PARA CARGAR AUTMATICAMENTE LOS COMBOBOX
         //========================================================================================================
@@ -131,15 +131,6 @@ namespace Proyecto_Final__Libreria_
                         //NOTA: CAMBIAR EL NOMBRE DEL OBJETO
                         datosLibro.Add(id, nombre);
                     }
-
-                    /*
-                     * UTILIZANDO LA PROPIEDAD DATA SOURCE se impide poder actualizar los datos
-                    // Asignar los datos al ComboBox
-                    //NOTA: CAMBIAR EL NOMBRE DE LOS COMBOBOX
-                    cmbNombreLibros.DataSource = new BindingSource(datosLibro, null);
-                    cmbNombreLibros.DisplayMember = "Value"; // Lo que se muestra al usuario
-                    cmbNombreLibros.ValueMember = "Key";    // La ID asociada
-                    */
                     
                     // Llena el ComboBox manualmente sin usar DataSource
                     cmbNombreLibros.Items.Clear(); // Limpia el ComboBox antes de llenarlo
@@ -458,8 +449,6 @@ namespace Proyecto_Final__Libreria_
 
 
         }
-
-
         private void cargarEditorialesAsignadas()
         {
             SqlConnection conexion = new SqlConnection(connectionString);
@@ -511,7 +500,6 @@ namespace Proyecto_Final__Libreria_
                 conexion.Close();
             }
         }
-
         private void cmbEditorialesAsignadas_SelectedIndexChanged(object sender, EventArgs e)
         {
             string valorBuscado = cmbEditorialesAsignadas.Text;
@@ -659,21 +647,42 @@ namespace Proyecto_Final__Libreria_
         {
             try
             {
+
                 SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
 
-                //Comando para eliminar un registro
-                SqlCommand cmd = new SqlCommand("update INVENTARIO set Visible = 0 where ID_Libro = " + idLibro, conexion);
-                cmd.ExecuteNonQuery();
+                string nombre = cmbNombreLibros.Text;
 
-                //Mensaje de exito
-                MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
+                // Consulta SQL para verificar si el dato existe
+                string query = "SELECT COUNT(*) FROM INVENTARIO WHERE Nombre_Libro = @nombre";
+                SqlCommand command = new SqlCommand(query, conexion);
+                command.Parameters.AddWithValue("@nombre", nombre);
 
-                //Se actualiza el combobox
+                // Ejecutar la consulta
+                int count = (int)command.ExecuteScalar();
+
+                if (count != 0)
+                {
+                    //Comando para eliminar un registro
+                    SqlCommand cmd = new SqlCommand("update INVENTARIO set Visible = 0 where ID_Libro = " + idLibro, conexion);
+                    cmd.ExecuteNonQuery();
+
+                    //Mensaje de exito
+                    MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
+
+                    //Se actualiza el combobox
+
+                    
+
+                    limpiarCampos();
+                }
+                else
+                {
+                    MessageBox.Show("El elemento especificado no existe, solo se limpiaran los campos");
+                    limpiarCampos();
+                }
 
                 conexion.Close();
-              
-                limpiarCampos();
             }
             catch
             {
@@ -687,32 +696,58 @@ namespace Proyecto_Final__Libreria_
             {
                 SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
+                
                 string nombre = cmbNombreLibros.Text;
 
+                Random random = new Random();
+
+                // Obtener un número entero aleatorio entre 0 (incluido) y 100 (excluido)
+                int numeroAleatorio = random.Next(0, 1000);
+
+                Random randomL = new Random();
+
+                // Generar un número aleatorio correspondiente a letras minúsculas (a-z)
+                char letraAleatoria = (char)random.Next('a', 'z' + 1);
+
                 // Consulta SQL para verificar si el dato existe
-                string query = "SELECT COUNT(*) FROM INVENTARIO WHERE Nombre_Libro = @nombre";
+                string query = "SELECT COUNT(*) FROM INVENTARIO WHERE Nombre_Libro = @nombre and visible = 1";
                 SqlCommand command = new SqlCommand(query, conexion);
                 command.Parameters.AddWithValue("@nombre", nombre);
 
                 // Ejecutar la consulta
                 int count = (int)command.ExecuteScalar();
 
+                //PROCESO PARA CAMBIAR EL FORMATO DE LA FECHA Y PODER ENVIARLO A LA BASE DE DATOS
+
+                string fechaOriginal = calendarioB.Text;
+
+                // Convertir la cadena a un objeto DateTime
+                DateTime fechaConvertida = DateTime.ParseExact(fechaOriginal, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+                // Formatear la fecha al nuevo formato "yyyy-MM-dd"
+                string fechaNueva = fechaConvertida.ToString("yyyy-MM-dd");
                 if (count == 0)
                 {
-                    //PROCESO PARA CAMBIAR EL FORMATO DE LA FECHA Y PODER ENVIARLO A LA BASE DE DATOS
-
-                    string fechaOriginal = calendarioB.Text;
-
-                    // Convertir la cadena a un objeto DateTime
-                    DateTime fechaConvertida = DateTime.ParseExact(fechaOriginal, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
-                    // Formatear la fecha al nuevo formato "yyyy-MM-dd"
-                    string fechaNueva = fechaConvertida.ToString("yyyy-MM-dd");
 
                     //Comando para insertar un registro
                     SqlCommand cmd = new SqlCommand("insert into INVENTARIO([Nombre_Libro], [Cantidad_Libros], [Fecha_Adicion], " +
                         "[Ann_Publicacion], [Precio], [Autor], [Cantidad_Vendida], [ID_Genero], [ID_Existencia],[ID_Seccion], " +
-                        "[ID_Formato],[Visible]) values('" + this.cmbNombreLibros.Text + "', " + Convert.ToInt32(this.txtCantidadDe.Text) +
+                        "[ID_Formato],[Visible]) values('" + this.cmbNombreLibros.Text +"', " + Convert.ToInt32(this.txtCantidadDe.Text) +
+                        ", '" + fechaNueva + "', " + Convert.ToInt32(this.txtAnnPubli.Text) + ", " + Convert.ToDecimal(this.txtPrecio.Text) + ", '" +
+                        this.txtAutor.Text + "', " + Convert.ToInt32(this.txtCantVen.Text) + ", " + idgenero + ", " + idExistenciaB +
+                        ", " + idSeccion + ", " + idFormato + ", " + 1 + ")", conexion);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
+                
+            
+                }
+                else
+                {
+                    //Comando para insertar un registro
+                    SqlCommand cmd = new SqlCommand("insert into INVENTARIO([Nombre_Libro], [Cantidad_Libros], [Fecha_Adicion], " +
+                        "[Ann_Publicacion], [Precio], [Autor], [Cantidad_Vendida], [ID_Genero], [ID_Existencia],[ID_Seccion], " +
+                        "[ID_Formato],[Visible]) values('" + this.cmbNombreLibros.Text + " #" + numeroAleatorio.ToString() + letraAleatoria +"', " + Convert.ToInt32(this.txtCantidadDe.Text) +
                         ", '" + fechaNueva + "', " + Convert.ToInt32(this.txtAnnPubli.Text) + ", " + Convert.ToDecimal(this.txtPrecio.Text) + ", '" +
                         this.txtAutor.Text + "', " + Convert.ToInt32(this.txtCantVen.Text) + ", " + idgenero + ", " + idExistenciaB +
                         ", " + idSeccion + ", " + idFormato + ", " + 1 + ")", conexion);
@@ -720,10 +755,7 @@ namespace Proyecto_Final__Libreria_
 
                     MessageBox.Show("Registro modificado exitosamente, refresque el programa para reflejarlo");
                 }
-                else
-                {
-                    MessageBox.Show("El nombre del libro ingresado ya existe o existio, favor de ingresar otro");
-                }
+            
                 conexion.Close();
 
                 limpiarCampos();
@@ -791,7 +823,6 @@ namespace Proyecto_Final__Libreria_
                 MessageBox.Show("Ha ocurrido un problema inesperado");
             }
         }
-
         private void label1_Click_1(object sender, EventArgs e)
         {
 
@@ -851,31 +882,169 @@ namespace Proyecto_Final__Libreria_
         }
         private void cmbAddGeneros_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if (!((e.KeyChar >= 65 && e.KeyChar <= 90)||e.KeyChar ==32||e.KeyChar == 8))
             {
-                MessageBox.Show("Solo se admiten letras", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo se admiten Mayusculas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
         }
         private void cmbAddFormatos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if (!((e.KeyChar >= 65 && e.KeyChar <= 90) || e.KeyChar == 32 || e.KeyChar == 8))
             {
-                MessageBox.Show("Solo se admiten letras", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo se admiten Mayusculas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
         }
         private void cmbAddEditoriales_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if (!((e.KeyChar >= 65 && e.KeyChar <= 90) || e.KeyChar == 32 || e.KeyChar == 8))
             {
-                MessageBox.Show("Solo se admiten letras", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo se admiten Mayusculas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
         }
+        private void CONSULTAR_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = 0;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = indiceActual;
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = cmbNombreLibros.SelectedIndex;
+
+                // Calcular el índice del siguiente elemento
+                int anteriorIndice = (indiceActual - 1 + cmbNombreLibros.Items.Count) % cmbNombreLibros.Items.Count;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = anteriorIndice;
+
+                //Efecto de sonido
+                SoundPlayer Pagina = new SoundPlayer();
+                //Ruta de Sandra:
+                //Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.Play();
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = cmbNombreLibros.SelectedIndex;
+
+                // Calcular el índice del siguiente elemento
+                int siguienteIndice = (indiceActual + 1) % cmbNombreLibros.Items.Count;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = siguienteIndice;
+
+                //Efecto de sonido
+                SoundPlayer Pagina = new SoundPlayer();
+                //Ruta de Sandra:
+                //Pagina.SoundLocation = "C:/Users/r/Source/Repos/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                //Ruta de Jesus:
+                Pagina.SoundLocation = "C:/Users/Queso Crema/Desktop/Proyecto-Final-Libreria-/Proyecto Final (Libreria)/Sonidos/CambioDePagina.wav";
+                Pagina.Play();
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+
+        }
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            // Si hay elementos en el ComboBox
+            if (cmbNombreLibros.Items.Count > 0)
+            {
+                // Obtener el índice actual
+                int indiceActual = cmbNombreLibros.Items.Count - 1;
+
+                // Seleccionar el siguiente elemento
+                cmbNombreLibros.SelectedIndex = indiceActual;
+            }
+            else
+            {
+                MessageBox.Show("El ComboBox está vacío.");
+            }
+        }
+
+        //BOTON PARA DESPLEGAR EL FORMS DE AYUDA (Manual de usuario)
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Ayuda forms2 = new Ayuda();
+            forms2.Show();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            
+           
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox23_Click(object sender, EventArgs e)
+        {
+            //Se guarda el texto referente al libro buscado
+            string libroBuscado = txtBusqueda.Text;
+
+            //Usamos FirstOrDefault para encontrar la primera pareja clave-valor (KeyValuePair<int, string>)
+            //donde el valor coincide con el texto buscado
+            //En caso de que se encuentre alguna coincidencia dentro de los parametros, devuelve su id
+            //Si no encuentra una coinicidencia, regresa "null" ya que "int?" acepta nulos (devolveria un 0 en caso de ser solo int
+            int? idEncontrado = datosLibro.FirstOrDefault(kv => kv.Value == libroBuscado).Key;
+
+            //Se evalua si "idEncontrado" tiene valor asignado
+            if (idEncontrado.HasValue && idEncontrado != 0)
+            {
+                int indice = idEncontrado.Value;
+
+                if (datosLibro.TryGetValue(indice, out string valor))
+                {
+                    cmbNombreLibros.Text = valor;
+                }
+            }
+            else
+            {
+
+                // Mostrar mensaje si no se encuentra el texto
+                MessageBox.Show("Libro no encontrado, intenta nuevamente");
+            }
+        }
+
         //====================================================================================================================
 
         private void btnAsignarEditorial_Click(object sender, EventArgs e)
@@ -905,19 +1074,37 @@ namespace Proyecto_Final__Libreria_
         private void btnAddEditoriales_Click(object sender, EventArgs e)
         {
             try 
-            { 
+            {
                 SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
 
-                //Comando para eliminar un registro
-                SqlCommand cmd = new SqlCommand("insert into Editorial values ('"+ this.cmbAddEditoriales.Text +"', "+ 1 +")", conexion);
-                cmd.ExecuteNonQuery();
+                //Este comando de sql consulta si es que hay datos que coincidan con lo escrito en el campo y ademas tengan visibilidad 1
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Editorial WHERE Editorial = '" + cmbAddEditoriales.Text + "' AND visible = 1", conexion);
 
-                MessageBox.Show("El registro se ha agregado exitosamente, refresque para reflejar cambios");
+                //Devuelve un valor mayor a 0 si es que existe algun registro que cumpla con las caracteristicas del query anterior
+                int consulta = (int)cmd.ExecuteScalar();
+
+                //En caso de que existe dicho registro entonces se debe de dat el aviso al usuario para evitar redundancia
+                if (consulta > 0)
+                {
+                    MessageBox.Show("Ya existe una Editorial registrada con el mismo nombre, favor de ingresar otra");
+                }
+                else if (cmbAddEditoriales.Text == "")
+                {
+                    MessageBox.Show("No se pueden ingresar campos en blanco, favor de ingresar algun dato");
+                }
+                else
+                {
+                    //Comando para eliminar un registro
+                    SqlCommand cmd2 = new SqlCommand("insert into Editorial values ('" + this.cmbAddEditoriales.Text + "', " + 1 + ")", conexion);
+                    cmd2.ExecuteNonQuery();
+
+                    MessageBox.Show("El registro se ha agregado exitosamente, refresque para reflejar cambios");
+                    
+                    //Se limpia ese campo en especifico
+                    cmbAddEditoriales.Text = "";
+                }
                 conexion.Close();
-
-                //Se limpia ese campo en especifico
-                cmbAddEditoriales.Text = "";
             }
             catch
             {
@@ -932,18 +1119,38 @@ namespace Proyecto_Final__Libreria_
                 SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
 
-                //Comando para eliminar un registro
-                SqlCommand cmd = new SqlCommand("update Editorial set Visible = 0 where ID_Editorial = " + idEditoriales, conexion);
-                cmd.ExecuteNonQuery();
+                string nombre = cmbAddEditoriales.Text;
 
-                //Mensaje de exito
-                MessageBox.Show("Se realizo la eliminacion correctamente, refresque los datos");
+                // Consulta SQL para verificar si el dato existe
+                string query = "SELECT COUNT(*) FROM Editorial WHERE Editorial = @nombre";
+                SqlCommand command = new SqlCommand(query, conexion);
+                command.Parameters.AddWithValue("@nombre", nombre);
 
-                //Se actualiza el combobox
+                // Ejecutar la consulta
+                int count = (int)command.ExecuteScalar();
 
+                if (count != 0)
+                {
+
+                    //Comando para eliminar un registro
+                    SqlCommand cmd = new SqlCommand("update Editorial set Visible = 0 where ID_Editorial = " + idEditoriales + " OR Editorial = '" +
+                    cmbAddEditoriales.Text + "'", conexion);
+                    cmd.ExecuteNonQuery();
+
+                    //Mensaje de exito
+                    MessageBox.Show("Se realizo la eliminacion correctamente, refresque los datos");
+
+                    //Se actualiza el combobox
+                    cmbAddEditoriales.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("El elemento especificado no existe, solo se limpiaran los campos");
+                    cmbAddEditoriales.Text = "";
+                }
                 conexion.Close();
 
-                cmbAddEditoriales.Text = "";
+
             }
             catch
             {
@@ -957,20 +1164,40 @@ namespace Proyecto_Final__Libreria_
                 SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
 
-                //Comando para eliminar un registro
-                SqlCommand cmd = new SqlCommand("insert into Genero values ('" + this.cmbAddGeneros.Text + "', " + 1 + ")", conexion);
-                cmd.ExecuteNonQuery();
+                //Este comando de sql consulta si es que hay datos que coincidan con lo escrito en el campo y ademas tengan visibilidad 1
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Genero WHERE Genero = '"+ cmbAddGeneros.Text + "' AND visible = 1", conexion);
+                
+                //Devuelve un valor mayor a 0 si es que existe algun registro que cumpla con las caracteristicas del query anterior
+                int consulta = (int)cmd.ExecuteScalar();
 
-                MessageBox.Show("El registro se ha agregado exitosamente, refresque para reflejar cambios");
-                conexion.Close();
+                //En caso de que existe dicho registro entonces se debe de dat el aviso al usuario para evitar redundancia
+                if (consulta > 0)
+                {
+                    MessageBox.Show("Ya existe un genero registrado con el mismo nombre, favor de ingresar otro");
+                }
+                else if(cmbAddGeneros.Text == "")
+                {
+                    MessageBox.Show("No se pueden ingresar campos en blanco, favor de ingresar algun dato");
+                }
+                //Si es que por parte de los registros visibles no existe dicho elemento, permite que se agregue :D
+                else
+                {
+                    //Comando para eliminar un registro
+                    SqlCommand cmd2 = new SqlCommand("insert into Genero values ('" + this.cmbAddGeneros.Text + "', " + 1 + ")", conexion);
+                    cmd2.ExecuteNonQuery();
 
-                //Se limpia ese campo en especifico
-                cmbAddGeneros.Text = "";
+                    MessageBox.Show("El registro se ha agregado exitosamente, refresque para reflejar cambios");
+                    conexion.Close();
+
+                    //Se limpia ese campo en especifico
+                    cmbAddGeneros.Text = "";
+                }
             }
             catch
             {
-                MessageBox.Show("Ha ocurrido un problema, revise los campos llenados");
+                MessageBox.Show("Ha ocurrido un error");
             }
+            
         }
         private void btnDelGeneros_Click(object sender, EventArgs e)
         {
@@ -979,18 +1206,39 @@ namespace Proyecto_Final__Libreria_
                 SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
 
-                //Comando para eliminar un registro
-                SqlCommand cmd = new SqlCommand("update Genero set Visible = 0 where ID_Genero = " + idAddGeneros, conexion);
-                cmd.ExecuteNonQuery();
+                string nombre = cmbAddGeneros.Text;
 
-                //Mensaje de exito
-                MessageBox.Show("Se realizo la eliminacion correctamente, refresque los datos");
+                // Consulta SQL para verificar si el dato existe
+                string query = "SELECT COUNT(*) FROM Genero WHERE Genero = @nombre";
+                SqlCommand command = new SqlCommand(query, conexion);
+                command.Parameters.AddWithValue("@nombre", nombre);
 
-                //Se actualiza el combobox
+                // Ejecutar la consulta
+                int count = (int)command.ExecuteScalar();
 
-                conexion.Close();
+                if (count != 0)
+                {
+                    //Comando para eliminar un registro
+                    SqlCommand cmd = new SqlCommand("update Genero set Visible = 0 where ID_Genero = " + idAddGeneros + " OR Genero = '" +
+                    cmbAddGeneros.Text + "'", conexion);
 
-                cmbAddGeneros.Text = "";
+                    cmd.ExecuteNonQuery();
+
+                    //Mensaje de exito
+                    MessageBox.Show("Se realizo la eliminacion correctamente, refresque los datos");
+
+                    //Se actualiza el combobox
+
+                    conexion.Close();
+
+                    cmbAddGeneros.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("El elemento especificado no existe, solo se limpiaran los campos");
+                    cmbAddGeneros.Text = "";
+                }
+
             }
             catch
             {
@@ -1004,15 +1252,34 @@ namespace Proyecto_Final__Libreria_
                 SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
 
+                //Este comando de sql consulta si es que hay datos que coincidan con lo escrito en el campo y ademas tengan visibilidad 1
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Formato WHERE Formato = '" + cmbAddFormatos.Text + "' AND visible = 1", conexion);
+
+                //Devuelve un valor mayor a 0 si es que existe algun registro que cumpla con las caracteristicas del query anterior
+                int consulta = (int)cmd.ExecuteScalar();
+
+                //En caso de que existe dicho registro entonces se debe de dat el aviso al usuario para evitar redundancia
+                if (consulta > 0)
+                {
+                    MessageBox.Show("Ya existe un formato registrado con el mismo nombre, favor de ingresar otro");
+                }
+                else if (cmbAddFormatos.Text == "")
+                {
+                    MessageBox.Show("No se pueden ingresar campos en blanco, favor de ingresar algun dato");
+                }
+                else
+                {
                 //Comando para eliminar un registro
-                SqlCommand cmd = new SqlCommand("insert into Formato values ('" + this.cmbAddFormatos.Text + "', " + 1 + ")", conexion);
-                cmd.ExecuteNonQuery();
+                SqlCommand cmd2 = new SqlCommand("insert into Formato values ('" + this.cmbAddFormatos.Text + "', " + 1 + ")", conexion);
+                cmd2.ExecuteNonQuery();
 
                 MessageBox.Show("El registro se ha agregado exitosamente, refresque para reflejar cambios");
-                conexion.Close();
+                
 
                 //Se limpia ese campo en especifico
                 cmbAddFormatos.Text = "";
+                }
+                conexion.Close();
             }
             catch
             {
@@ -1026,18 +1293,38 @@ namespace Proyecto_Final__Libreria_
                 SqlConnection conexion = new SqlConnection(connectionString);
                 conexion.Open();
 
-                //Comando para eliminar un registro
-                SqlCommand cmd = new SqlCommand("update Formato set Visible = 0 where ID_Formato = " + idAddFormato, conexion);
-                cmd.ExecuteNonQuery();
+                string nombre = cmbAddFormatos.Text;
 
-                //Mensaje de exito
-                MessageBox.Show("Se realizo la eliminacion correctamente, refresque los datos");
+                // Consulta SQL para verificar si el dato existe
+                string query = "SELECT COUNT(*) FROM Formato WHERE Formato = @nombre";
+                SqlCommand command = new SqlCommand(query, conexion);
+                command.Parameters.AddWithValue("@nombre", nombre);
 
-                //Se actualiza el combobox
+                // Ejecutar la consulta
+                int count = (int)command.ExecuteScalar();
 
-                conexion.Close();
+                if (count != 0)
+                {
 
-                cmbAddFormatos.Text = "";
+                    //Comando para eliminar un registro
+                    SqlCommand cmd = new SqlCommand("update Formato set Visible = 0 where ID_Formato = " + idAddFormato + " OR Formato = '" +
+                    cmbAddFormatos.Text + "'", conexion);
+                    cmd.ExecuteNonQuery();
+
+                    //Mensaje de exito
+                    MessageBox.Show("Se realizo la eliminacion correctamente, refresque los datos");
+
+                    //Se actualiza el combobox
+
+                    conexion.Close();
+
+                    cmbAddFormatos.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("El elemento especificado no existe, solo se limpiaran los campos");
+                    cmbAddFormatos.Text = "";
+                }
             }
             catch
             {
@@ -1107,7 +1394,7 @@ namespace Proyecto_Final__Libreria_
                 catch
                 {
                     MessageBox.Show("Selecciono un libro con un elemento invalido, dicho recuadro aparecera en blanco");
-                    cmbGenero.Text = "";
+                    cmbGenero.SelectedIndex = -1;
                 }
                 finally
                 {
@@ -1126,13 +1413,18 @@ namespace Proyecto_Final__Libreria_
                     int secFormato = int.Parse(formato);
                     string valorFormato = datosFormato[secFormato];
                     cmbFormato.Text = valorFormato;
+                    if (cmbFormato.Text == "")
+                    {
+                        MessageBox.Show("Formato inexistente");
+                    }
                     //===================================================================
+                    
                     conexion.Close();
                 }
             }
             catch
             {
-                MessageBox.Show("No hay elementos para cargar, favor de ingresar algunos");
+                MessageBox.Show("Hubo un error por datos inexistentes, favor de revisar");
             }
             
         }

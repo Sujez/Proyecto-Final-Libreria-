@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.AGREGAR = new System.Windows.Forms.TabPage();
             this.lblEncabezado2daHoja = new System.Windows.Forms.Label();
             this.btnAsignarEditorial = new System.Windows.Forms.Button();
@@ -40,15 +42,12 @@
             this.btnEliminarEditorial = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.CONSULTAR = new System.Windows.Forms.TabPage();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblEncabezado1erHoja = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.calendarioB = new System.Windows.Forms.DateTimePicker();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnInicio = new System.Windows.Forms.Button();
-            this.btnFinal = new System.Windows.Forms.Button();
-            this.btnAnterior = new System.Windows.Forms.Button();
-            this.BtnSiguiente = new System.Windows.Forms.Button();
             this.cmbFormato = new System.Windows.Forms.ComboBox();
             this.lblFormato = new System.Windows.Forms.Label();
             this.cmbSeccion = new System.Windows.Forms.ComboBox();
@@ -85,14 +84,68 @@
             this.cmbAddEditoriales = new System.Windows.Forms.ComboBox();
             this.cmbAddGeneros = new System.Windows.Forms.ComboBox();
             this.btnRefrescar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.AGREGAR.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.CONSULTAR.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.SuspendLayout();
             // 
             // AGREGAR
             // 
+            this.AGREGAR.BackColor = System.Drawing.Color.Gainsboro;
+            this.AGREGAR.Controls.Add(this.pictureBox14);
+            this.AGREGAR.Controls.Add(this.pictureBox13);
+            this.AGREGAR.Controls.Add(this.pictureBox12);
+            this.AGREGAR.Controls.Add(this.pictureBox11);
             this.AGREGAR.Controls.Add(this.lblEncabezado2daHoja);
             this.AGREGAR.Controls.Add(this.btnAsignarEditorial);
             this.AGREGAR.Controls.Add(this.lblHoja2_MensajeEditDisponibles);
@@ -102,123 +155,160 @@
             this.AGREGAR.Controls.Add(this.lblHoja2_MensajeNombre);
             this.AGREGAR.Controls.Add(this.cmbNombres_Consulta2);
             this.AGREGAR.Controls.Add(this.btnEliminarEditorial);
-            this.AGREGAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AGREGAR.Location = new System.Drawing.Point(4, 25);
+            this.AGREGAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AGREGAR.Location = new System.Drawing.Point(4, 29);
             this.AGREGAR.Name = "AGREGAR";
             this.AGREGAR.Padding = new System.Windows.Forms.Padding(3);
-            this.AGREGAR.Size = new System.Drawing.Size(708, 475);
+            this.AGREGAR.Size = new System.Drawing.Size(602, 598);
             this.AGREGAR.TabIndex = 0;
-            this.AGREGAR.Text = "APARTADO DE EDITORIALES";
-            this.AGREGAR.UseVisualStyleBackColor = true;
+            this.AGREGAR.Text = "Editoriales de un Libro";
             // 
             // lblEncabezado2daHoja
             // 
             this.lblEncabezado2daHoja.AutoSize = true;
-            this.lblEncabezado2daHoja.Location = new System.Drawing.Point(167, 14);
+            this.lblEncabezado2daHoja.Font = new System.Drawing.Font("Nexa Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncabezado2daHoja.Location = new System.Drawing.Point(96, 18);
             this.lblEncabezado2daHoja.Name = "lblEncabezado2daHoja";
-            this.lblEncabezado2daHoja.Size = new System.Drawing.Size(404, 16);
+            this.lblEncabezado2daHoja.Size = new System.Drawing.Size(409, 50);
             this.lblEncabezado2daHoja.TabIndex = 9;
-            this.lblEncabezado2daHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR EDITORIALES";
+            this.lblEncabezado2daHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR \r\nEDITORIALES DE UN LIBRO";
+            this.lblEncabezado2daHoja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAsignarEditorial
             // 
-            this.btnAsignarEditorial.Location = new System.Drawing.Point(405, 208);
+            this.btnAsignarEditorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsignarEditorial.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnAsignarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAsignarEditorial.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignarEditorial.Location = new System.Drawing.Point(130, 475);
             this.btnAsignarEditorial.Name = "btnAsignarEditorial";
-            this.btnAsignarEditorial.Size = new System.Drawing.Size(149, 38);
+            this.btnAsignarEditorial.Size = new System.Drawing.Size(148, 44);
             this.btnAsignarEditorial.TabIndex = 8;
-            this.btnAsignarEditorial.Text = "Asignar Editorial";
+            this.btnAsignarEditorial.Text = "Agregar editorial";
             this.btnAsignarEditorial.UseVisualStyleBackColor = true;
             this.btnAsignarEditorial.Click += new System.EventHandler(this.btnAsignarEditorial_Click);
             // 
             // lblHoja2_MensajeEditDisponibles
             // 
             this.lblHoja2_MensajeEditDisponibles.AutoSize = true;
-            this.lblHoja2_MensajeEditDisponibles.Location = new System.Drawing.Point(402, 151);
+            this.lblHoja2_MensajeEditDisponibles.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoja2_MensajeEditDisponibles.Location = new System.Drawing.Point(69, 402);
             this.lblHoja2_MensajeEditDisponibles.Name = "lblHoja2_MensajeEditDisponibles";
-            this.lblHoja2_MensajeEditDisponibles.Size = new System.Drawing.Size(169, 16);
+            this.lblHoja2_MensajeEditDisponibles.Size = new System.Drawing.Size(193, 21);
             this.lblHoja2_MensajeEditDisponibles.TabIndex = 7;
-            this.lblHoja2_MensajeEditDisponibles.Text = "Editoriales Disponibles";
+            this.lblHoja2_MensajeEditDisponibles.Text = "Editoriales disponibles :";
             // 
             // cmbEditorialesDisponibles
             // 
+            this.cmbEditorialesDisponibles.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbEditorialesDisponibles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditorialesDisponibles.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEditorialesDisponibles.ForeColor = System.Drawing.Color.DimGray;
             this.cmbEditorialesDisponibles.FormattingEnabled = true;
-            this.cmbEditorialesDisponibles.Location = new System.Drawing.Point(405, 170);
+            this.cmbEditorialesDisponibles.Location = new System.Drawing.Point(66, 431);
             this.cmbEditorialesDisponibles.Name = "cmbEditorialesDisponibles";
-            this.cmbEditorialesDisponibles.Size = new System.Drawing.Size(163, 24);
+            this.cmbEditorialesDisponibles.Size = new System.Drawing.Size(456, 29);
             this.cmbEditorialesDisponibles.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.cmbEditorialesDisponibles, "Aquí veras todas las editoriales que maneja la librería.\r\n*NOTA : Si quieres asig" +
+        "nar una editorial al libro, seleccionala primero antes de darle al botón.");
             this.cmbEditorialesDisponibles.SelectedIndexChanged += new System.EventHandler(this.cmbEditorialesDisponibles_SelectedIndexChanged_1);
             // 
             // lblHoja2_MensajeEditorial
             // 
             this.lblHoja2_MensajeEditorial.AutoSize = true;
-            this.lblHoja2_MensajeEditorial.Location = new System.Drawing.Point(135, 151);
+            this.lblHoja2_MensajeEditorial.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoja2_MensajeEditorial.Location = new System.Drawing.Point(61, 225);
             this.lblHoja2_MensajeEditorial.Name = "lblHoja2_MensajeEditorial";
-            this.lblHoja2_MensajeEditorial.Size = new System.Drawing.Size(208, 16);
+            this.lblHoja2_MensajeEditorial.Size = new System.Drawing.Size(243, 21);
             this.lblHoja2_MensajeEditorial.TabIndex = 5;
-            this.lblHoja2_MensajeEditorial.Text = "Editoriales Asingadas a libro";
+            this.lblHoja2_MensajeEditorial.Text = "Editoriales asingadas al libro :";
             // 
             // cmbEditorialesAsignadas
             // 
+            this.cmbEditorialesAsignadas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbEditorialesAsignadas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditorialesAsignadas.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEditorialesAsignadas.ForeColor = System.Drawing.Color.DimGray;
             this.cmbEditorialesAsignadas.FormattingEnabled = true;
-            this.cmbEditorialesAsignadas.Location = new System.Drawing.Point(155, 170);
+            this.cmbEditorialesAsignadas.Location = new System.Drawing.Point(64, 261);
             this.cmbEditorialesAsignadas.Name = "cmbEditorialesAsignadas";
-            this.cmbEditorialesAsignadas.Size = new System.Drawing.Size(163, 24);
+            this.cmbEditorialesAsignadas.Size = new System.Drawing.Size(458, 29);
             this.cmbEditorialesAsignadas.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.cmbEditorialesAsignadas, "Aquí se mostraran todas las editoriales a las que el libro pertenece.\r\n*NOTA : Si" +
+        " deseas quitar esa editorial del libro, seleccionalo primero antes de darle al b" +
+        "otón.\r\n");
             this.cmbEditorialesAsignadas.SelectedIndexChanged += new System.EventHandler(this.cmbEditorialesAsignadas_SelectedIndexChanged);
             // 
             // lblHoja2_MensajeNombre
             // 
             this.lblHoja2_MensajeNombre.AutoSize = true;
-            this.lblHoja2_MensajeNombre.Location = new System.Drawing.Point(266, 57);
+            this.lblHoja2_MensajeNombre.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoja2_MensajeNombre.Location = new System.Drawing.Point(69, 116);
             this.lblHoja2_MensajeNombre.Name = "lblHoja2_MensajeNombre";
-            this.lblHoja2_MensajeNombre.Size = new System.Drawing.Size(203, 16);
+            this.lblHoja2_MensajeNombre.Size = new System.Drawing.Size(147, 21);
             this.lblHoja2_MensajeNombre.TabIndex = 3;
-            this.lblHoja2_MensajeNombre.Text = "Nombre del libro a consultar";
+            this.lblHoja2_MensajeNombre.Text = "Nombre del libro :";
             // 
             // cmbNombres_Consulta2
             // 
+            this.cmbNombres_Consulta2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbNombres_Consulta2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNombres_Consulta2.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNombres_Consulta2.ForeColor = System.Drawing.Color.DimGray;
             this.cmbNombres_Consulta2.FormattingEnabled = true;
-            this.cmbNombres_Consulta2.Location = new System.Drawing.Point(220, 76);
+            this.cmbNombres_Consulta2.Location = new System.Drawing.Point(65, 140);
             this.cmbNombres_Consulta2.Name = "cmbNombres_Consulta2";
-            this.cmbNombres_Consulta2.Size = new System.Drawing.Size(284, 24);
+            this.cmbNombres_Consulta2.Size = new System.Drawing.Size(458, 29);
             this.cmbNombres_Consulta2.TabIndex = 2;
             this.cmbNombres_Consulta2.SelectedIndexChanged += new System.EventHandler(this.cmbNombres_Consulta2_SelectedIndexChanged);
             // 
             // btnEliminarEditorial
             // 
-            this.btnEliminarEditorial.Location = new System.Drawing.Point(165, 208);
+            this.btnEliminarEditorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarEditorial.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnEliminarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnEliminarEditorial.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarEditorial.Location = new System.Drawing.Point(130, 308);
             this.btnEliminarEditorial.Name = "btnEliminarEditorial";
-            this.btnEliminarEditorial.Size = new System.Drawing.Size(149, 38);
+            this.btnEliminarEditorial.Size = new System.Drawing.Size(148, 44);
             this.btnEliminarEditorial.TabIndex = 0;
-            this.btnEliminarEditorial.Text = "Eliminar Relacion";
+            this.btnEliminarEditorial.Text = "Eliminar relación";
             this.btnEliminarEditorial.UseVisualStyleBackColor = true;
             this.btnEliminarEditorial.Click += new System.EventHandler(this.btnEliminarEditorial_Click);
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl1.Controls.Add(this.CONSULTAR);
             this.tabControl1.Controls.Add(this.AGREGAR);
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(12, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(716, 504);
+            this.tabControl1.Size = new System.Drawing.Size(610, 631);
             this.tabControl1.TabIndex = 1;
             // 
             // CONSULTAR
             // 
+            this.CONSULTAR.BackColor = System.Drawing.Color.Gainsboro;
+            this.CONSULTAR.Controls.Add(this.label1);
+            this.CONSULTAR.Controls.Add(this.pictureBox23);
+            this.CONSULTAR.Controls.Add(this.txtBusqueda);
+            this.CONSULTAR.Controls.Add(this.pictureBox10);
+            this.CONSULTAR.Controls.Add(this.pictureBox8);
+            this.CONSULTAR.Controls.Add(this.pictureBox7);
+            this.CONSULTAR.Controls.Add(this.pictureBox6);
+            this.CONSULTAR.Controls.Add(this.pictureBox3);
+            this.CONSULTAR.Controls.Add(this.pictureBox5);
+            this.CONSULTAR.Controls.Add(this.pictureBox4);
+            this.CONSULTAR.Controls.Add(this.pictureBox2);
+            this.CONSULTAR.Controls.Add(this.pictureBox1);
             this.CONSULTAR.Controls.Add(this.lblEncabezado1erHoja);
             this.CONSULTAR.Controls.Add(this.btnInsertar);
             this.CONSULTAR.Controls.Add(this.btnEliminar);
             this.CONSULTAR.Controls.Add(this.calendarioB);
             this.CONSULTAR.Controls.Add(this.btnModificar);
-            this.CONSULTAR.Controls.Add(this.btnInicio);
-            this.CONSULTAR.Controls.Add(this.btnFinal);
-            this.CONSULTAR.Controls.Add(this.btnAnterior);
-            this.CONSULTAR.Controls.Add(this.BtnSiguiente);
             this.CONSULTAR.Controls.Add(this.cmbFormato);
             this.CONSULTAR.Controls.Add(this.lblFormato);
             this.CONSULTAR.Controls.Add(this.cmbSeccion);
@@ -240,148 +330,155 @@
             this.CONSULTAR.Controls.Add(this.lblNombreLibro);
             this.CONSULTAR.Controls.Add(this.txtCantidadDe);
             this.CONSULTAR.Controls.Add(this.cmbNombreLibros);
-            this.CONSULTAR.Location = new System.Drawing.Point(4, 25);
+            this.CONSULTAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CONSULTAR.Location = new System.Drawing.Point(4, 29);
             this.CONSULTAR.Name = "CONSULTAR";
             this.CONSULTAR.Padding = new System.Windows.Forms.Padding(3);
-            this.CONSULTAR.Size = new System.Drawing.Size(708, 475);
+            this.CONSULTAR.Size = new System.Drawing.Size(602, 598);
             this.CONSULTAR.TabIndex = 1;
-            this.CONSULTAR.Text = "CONSULTA Y MANIPULACION";
-            this.CONSULTAR.UseVisualStyleBackColor = true;
+            this.CONSULTAR.Text = "Consulta y Modificación general";
+            this.CONSULTAR.Click += new System.EventHandler(this.CONSULTAR_Click);
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBusqueda.Location = new System.Drawing.Point(148, 66);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(328, 27);
+            this.txtBusqueda.TabIndex = 48;
+            this.toolTip1.SetToolTip(this.txtBusqueda, "Ingresa el nombre del libro que deseas buscar.\r\n*NOTA: Respeta las mayusculas y m" +
+        "inusculas.\r\n");
             // 
             // lblEncabezado1erHoja
             // 
             this.lblEncabezado1erHoja.AutoSize = true;
-            this.lblEncabezado1erHoja.Location = new System.Drawing.Point(144, 3);
+            this.lblEncabezado1erHoja.Font = new System.Drawing.Font("Nexa Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncabezado1erHoja.Location = new System.Drawing.Point(26, 21);
             this.lblEncabezado1erHoja.Name = "lblEncabezado1erHoja";
-            this.lblEncabezado1erHoja.Size = new System.Drawing.Size(367, 16);
+            this.lblEncabezado1erHoja.Size = new System.Drawing.Size(550, 25);
             this.lblEncabezado1erHoja.TabIndex = 36;
-            this.lblEncabezado1erHoja.Text = "APARTADO DE CONSULTA Y MANIPULACION DE DATOS";
+            this.lblEncabezado1erHoja.Text = "APARTADO DE CONSULTA Y MANIPULACIÓN DE DATOS";
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(548, 259);
+            this.btnInsertar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInsertar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnInsertar.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertar.Location = new System.Drawing.Point(110, 534);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(130, 41);
+            this.btnInsertar.Size = new System.Drawing.Size(91, 44);
             this.btnInsertar.TabIndex = 35;
-            this.btnInsertar.Text = "Insertar Registro";
+            this.btnInsertar.Text = "Registrar";
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(548, 182);
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnEliminar.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(273, 534);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(130, 41);
+            this.btnEliminar.Size = new System.Drawing.Size(86, 44);
             this.btnEliminar.TabIndex = 34;
-            this.btnEliminar.Text = "Eliminar Registro";
+            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // calendarioB
             // 
+            this.calendarioB.CalendarForeColor = System.Drawing.Color.DimGray;
+            this.calendarioB.CalendarTitleBackColor = System.Drawing.Color.DarkGray;
+            this.calendarioB.CalendarTitleForeColor = System.Drawing.Color.DimGray;
+            this.calendarioB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calendarioB.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarioB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.calendarioB.Location = new System.Drawing.Point(39, 162);
+            this.calendarioB.Location = new System.Drawing.Point(403, 198);
             this.calendarioB.Name = "calendarioB";
-            this.calendarioB.Size = new System.Drawing.Size(107, 22);
+            this.calendarioB.Size = new System.Drawing.Size(134, 27);
             this.calendarioB.TabIndex = 33;
+            this.toolTip1.SetToolTip(this.calendarioB, "Fecha en la que el libro se empieza a vender en la librería.\r\n");
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(548, 107);
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnModificar.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(430, 534);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(130, 52);
+            this.btnModificar.Size = new System.Drawing.Size(88, 44);
             this.btnModificar.TabIndex = 32;
-            this.btnModificar.Text = "Modificar Registro";
+            this.btnModificar.Text = "Modificar";
+            this.toolTip1.SetToolTip(this.btnModificar, "Para modificar la información de un libro, ten en cuenta que debes seleccionarlo " +
+        "primero\r\ny posteriormente cambiar los campos, esto, antes de darle al botón.");
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnInicio
-            // 
-            this.btnInicio.Location = new System.Drawing.Point(61, 422);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(91, 33);
-            this.btnInicio.TabIndex = 31;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // btnFinal
-            // 
-            this.btnFinal.Location = new System.Drawing.Point(420, 422);
-            this.btnFinal.Name = "btnFinal";
-            this.btnFinal.Size = new System.Drawing.Size(91, 33);
-            this.btnFinal.TabIndex = 30;
-            this.btnFinal.Text = "Final";
-            this.btnFinal.UseVisualStyleBackColor = true;
-            this.btnFinal.Click += new System.EventHandler(this.btnFinal_Click);
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.Location = new System.Drawing.Point(179, 422);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(91, 33);
-            this.btnAnterior.TabIndex = 29;
-            this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.UseVisualStyleBackColor = true;
-            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
-            // 
-            // BtnSiguiente
-            // 
-            this.BtnSiguiente.Location = new System.Drawing.Point(311, 422);
-            this.BtnSiguiente.Name = "BtnSiguiente";
-            this.BtnSiguiente.Size = new System.Drawing.Size(91, 33);
-            this.BtnSiguiente.TabIndex = 27;
-            this.BtnSiguiente.Text = "Siguiente";
-            this.BtnSiguiente.UseVisualStyleBackColor = true;
-            this.BtnSiguiente.Click += new System.EventHandler(this.BtnSiguiente_Click);
-            // 
             // cmbFormato
             // 
+            this.cmbFormato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFormato.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFormato.ForeColor = System.Drawing.Color.DimGray;
             this.cmbFormato.FormattingEnabled = true;
-            this.cmbFormato.Location = new System.Drawing.Point(337, 354);
+            this.cmbFormato.Location = new System.Drawing.Point(392, 322);
             this.cmbFormato.Name = "cmbFormato";
-            this.cmbFormato.Size = new System.Drawing.Size(174, 24);
+            this.cmbFormato.Size = new System.Drawing.Size(136, 25);
             this.cmbFormato.TabIndex = 26;
             this.cmbFormato.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // lblFormato
             // 
             this.lblFormato.AutoSize = true;
-            this.lblFormato.Location = new System.Drawing.Point(334, 337);
+            this.lblFormato.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormato.Location = new System.Drawing.Point(390, 298);
             this.lblFormato.Name = "lblFormato";
-            this.lblFormato.Size = new System.Drawing.Size(57, 16);
+            this.lblFormato.Size = new System.Drawing.Size(87, 21);
             this.lblFormato.TabIndex = 25;
-            this.lblFormato.Text = "Formato";
+            this.lblFormato.Text = "Formato :";
             this.lblFormato.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbSeccion
             // 
+            this.cmbSeccion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSeccion.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSeccion.ForeColor = System.Drawing.Color.DimGray;
             this.cmbSeccion.FormattingEnabled = true;
-            this.cmbSeccion.Location = new System.Drawing.Point(337, 287);
+            this.cmbSeccion.Location = new System.Drawing.Point(238, 322);
             this.cmbSeccion.Name = "cmbSeccion";
-            this.cmbSeccion.Size = new System.Drawing.Size(174, 24);
+            this.cmbSeccion.Size = new System.Drawing.Size(116, 25);
             this.cmbSeccion.TabIndex = 24;
+            this.toolTip1.SetToolTip(this.cmbSeccion, "Es la localización del libro en la libreía.");
             this.cmbSeccion.SelectedIndexChanged += new System.EventHandler(this.cmbSeccion_SelectedIndexChanged);
             // 
             // cmbExistencia
             // 
+            this.cmbExistencia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbExistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbExistencia.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbExistencia.ForeColor = System.Drawing.Color.DimGray;
             this.cmbExistencia.FormattingEnabled = true;
-            this.cmbExistencia.Location = new System.Drawing.Point(337, 222);
+            this.cmbExistencia.Location = new System.Drawing.Point(63, 259);
             this.cmbExistencia.Name = "cmbExistencia";
-            this.cmbExistencia.Size = new System.Drawing.Size(174, 24);
+            this.cmbExistencia.Size = new System.Drawing.Size(155, 25);
             this.cmbExistencia.TabIndex = 23;
             this.cmbExistencia.SelectedIndexChanged += new System.EventHandler(this.cmbExistencia_SelectedIndexChanged);
             // 
             // cmbGenero
             // 
+            this.cmbGenero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGenero.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGenero.ForeColor = System.Drawing.Color.DimGray;
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(337, 160);
+            this.cmbGenero.Location = new System.Drawing.Point(65, 322);
             this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(174, 24);
+            this.cmbGenero.Size = new System.Drawing.Size(142, 25);
             this.cmbGenero.TabIndex = 22;
             this.cmbGenero.SelectedIndexChanged += new System.EventHandler(this.cmbGenero_SelectedIndexChanged);
             this.cmbGenero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGenero_KeyPress);
@@ -389,144 +486,183 @@
             // lblSeccion
             // 
             this.lblSeccion.AutoSize = true;
-            this.lblSeccion.Location = new System.Drawing.Point(334, 270);
+            this.lblSeccion.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeccion.Location = new System.Drawing.Point(238, 298);
             this.lblSeccion.Name = "lblSeccion";
-            this.lblSeccion.Size = new System.Drawing.Size(56, 16);
+            this.lblSeccion.Size = new System.Drawing.Size(78, 21);
             this.lblSeccion.TabIndex = 21;
-            this.lblSeccion.Text = "Seccion";
+            this.lblSeccion.Text = "Sección :";
             // 
             // lblExistencia
             // 
             this.lblExistencia.AutoSize = true;
-            this.lblExistencia.Location = new System.Drawing.Point(334, 205);
+            this.lblExistencia.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExistencia.Location = new System.Drawing.Point(61, 235);
             this.lblExistencia.Name = "lblExistencia";
-            this.lblExistencia.Size = new System.Drawing.Size(68, 16);
+            this.lblExistencia.Size = new System.Drawing.Size(157, 21);
             this.lblExistencia.TabIndex = 19;
-            this.lblExistencia.Text = "Existencia";
+            this.lblExistencia.Text = "Tipo de existencia :";
             // 
             // lblGen
             // 
             this.lblGen.AutoSize = true;
-            this.lblGen.Location = new System.Drawing.Point(334, 143);
+            this.lblGen.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGen.Location = new System.Drawing.Point(65, 298);
             this.lblGen.Name = "lblGen";
-            this.lblGen.Size = new System.Drawing.Size(52, 16);
+            this.lblGen.Size = new System.Drawing.Size(75, 21);
             this.lblGen.TabIndex = 17;
-            this.lblGen.Text = "Genero";
+            this.lblGen.Text = "Genero :";
             // 
             // lblCantVen
             // 
             this.lblCantVen.AutoSize = true;
-            this.lblCantVen.Location = new System.Drawing.Point(334, 83);
+            this.lblCantVen.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantVen.Location = new System.Drawing.Point(192, 173);
             this.lblCantVen.Name = "lblCantVen";
-            this.lblCantVen.Size = new System.Drawing.Size(134, 16);
+            this.lblCantVen.Size = new System.Drawing.Size(170, 21);
             this.lblCantVen.TabIndex = 15;
-            this.lblCantVen.Text = "Cantidad de Vendida";
+            this.lblCantVen.Text = "Cantidad de ventas :";
             // 
             // txtCantVen
             // 
-            this.txtCantVen.Location = new System.Drawing.Point(337, 102);
+            this.txtCantVen.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantVen.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCantVen.Location = new System.Drawing.Point(196, 197);
             this.txtCantVen.Name = "txtCantVen";
-            this.txtCantVen.Size = new System.Drawing.Size(80, 22);
+            this.txtCantVen.Size = new System.Drawing.Size(169, 27);
             this.txtCantVen.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.txtCantVen, "La cantidad de ventas hechas del libro.\r\n*NOTA : Si se esta registrando un libro " +
+        "esta debe ser 0.\r\n");
             this.txtCantVen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantVen_KeyPress);
             // 
             // lblAutor
             // 
             this.lblAutor.AutoSize = true;
-            this.lblAutor.Location = new System.Drawing.Point(36, 337);
+            this.lblAutor.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutor.Location = new System.Drawing.Point(65, 360);
             this.lblAutor.Name = "lblAutor";
-            this.lblAutor.Size = new System.Drawing.Size(38, 16);
+            this.lblAutor.Size = new System.Drawing.Size(146, 21);
             this.lblAutor.TabIndex = 13;
-            this.lblAutor.Text = "Autor";
+            this.lblAutor.Text = "Autor o Autores :";
             // 
             // txtAutor
             // 
-            this.txtAutor.Location = new System.Drawing.Point(39, 356);
+            this.txtAutor.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutor.ForeColor = System.Drawing.Color.DimGray;
+            this.txtAutor.Location = new System.Drawing.Point(63, 384);
             this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(231, 22);
+            this.txtAutor.Size = new System.Drawing.Size(465, 27);
             this.txtAutor.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.txtAutor, "En caso de ser mas de un autor, se deben separar mediante comas \" , \".");
             this.txtAutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAutor_KeyPress);
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(36, 270);
+            this.lblPrecio.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(249, 235);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(46, 16);
+            this.lblPrecio.Size = new System.Drawing.Size(67, 21);
             this.lblPrecio.TabIndex = 11;
-            this.lblPrecio.Text = "Precio";
+            this.lblPrecio.Text = "Precio :";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(39, 289);
+            this.txtPrecio.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPrecio.Location = new System.Drawing.Point(243, 259);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(87, 22);
+            this.txtPrecio.Size = new System.Drawing.Size(113, 27);
             this.txtPrecio.TabIndex = 10;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblAnnPubli
             // 
             this.lblAnnPubli.AutoSize = true;
-            this.lblAnnPubli.Location = new System.Drawing.Point(36, 205);
+            this.lblAnnPubli.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnnPubli.Location = new System.Drawing.Point(390, 235);
             this.lblAnnPubli.Name = "lblAnnPubli";
-            this.lblAnnPubli.Size = new System.Drawing.Size(122, 16);
+            this.lblAnnPubli.Size = new System.Drawing.Size(166, 21);
             this.lblAnnPubli.TabIndex = 9;
-            this.lblAnnPubli.Text = "Año de publicacion";
+            this.lblAnnPubli.Text = "Año de publicación :";
             // 
             // txtAnnPubli
             // 
-            this.txtAnnPubli.Location = new System.Drawing.Point(39, 224);
+            this.txtAnnPubli.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnnPubli.ForeColor = System.Drawing.Color.DimGray;
+            this.txtAnnPubli.Location = new System.Drawing.Point(392, 259);
             this.txtAnnPubli.Name = "txtAnnPubli";
-            this.txtAnnPubli.Size = new System.Drawing.Size(87, 22);
+            this.txtAnnPubli.Size = new System.Drawing.Size(138, 27);
             this.txtAnnPubli.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.txtAnnPubli, "No se debe agregar el signo de pesos, pero ten en cuenta los decimales.\r\n");
             this.txtAnnPubli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnnPubli_KeyPress);
             // 
             // lblFechaAdd
             // 
             this.lblFechaAdd.AutoSize = true;
-            this.lblFechaAdd.Location = new System.Drawing.Point(36, 143);
+            this.lblFechaAdd.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaAdd.Location = new System.Drawing.Point(399, 173);
             this.lblFechaAdd.Name = "lblFechaAdd";
-            this.lblFechaAdd.Size = new System.Drawing.Size(111, 16);
+            this.lblFechaAdd.Size = new System.Drawing.Size(148, 21);
             this.lblFechaAdd.TabIndex = 7;
-            this.lblFechaAdd.Text = "Fecha de adicion";
+            this.lblFechaAdd.Text = "Fecha de adición :";
             // 
             // lblCantidadDe
             // 
             this.lblCantidadDe.AutoSize = true;
-            this.lblCantidadDe.Location = new System.Drawing.Point(36, 83);
+            this.lblCantidadDe.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadDe.Location = new System.Drawing.Point(69, 173);
             this.lblCantidadDe.Name = "lblCantidadDe";
-            this.lblCantidadDe.Size = new System.Drawing.Size(116, 16);
+            this.lblCantidadDe.Size = new System.Drawing.Size(90, 21);
             this.lblCantidadDe.TabIndex = 5;
-            this.lblCantidadDe.Text = "Cantidad de libros";
+            this.lblCantidadDe.Text = "Cantidad :";
             // 
             // lblNombreLibro
             // 
             this.lblNombreLibro.AutoSize = true;
-            this.lblNombreLibro.Location = new System.Drawing.Point(36, 24);
+            this.lblNombreLibro.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreLibro.Location = new System.Drawing.Point(69, 111);
             this.lblNombreLibro.Name = "lblNombreLibro";
-            this.lblNombreLibro.Size = new System.Drawing.Size(107, 16);
+            this.lblNombreLibro.Size = new System.Drawing.Size(147, 21);
             this.lblNombreLibro.TabIndex = 4;
-            this.lblNombreLibro.Text = "Nombre del libro";
+            this.lblNombreLibro.Text = "Nombre del libro :";
             // 
             // txtCantidadDe
             // 
-            this.txtCantidadDe.Location = new System.Drawing.Point(39, 102);
+            this.txtCantidadDe.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadDe.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCantidadDe.Location = new System.Drawing.Point(72, 198);
             this.txtCantidadDe.Name = "txtCantidadDe";
-            this.txtCantidadDe.Size = new System.Drawing.Size(87, 22);
+            this.txtCantidadDe.Size = new System.Drawing.Size(87, 27);
             this.txtCantidadDe.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtCantidadDe, "Es la cantidad que hay en el inventario de la librería.\r\n");
             this.txtCantidadDe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadDe_KeyPress);
             // 
             // cmbNombreLibros
             // 
+            this.cmbNombreLibros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbNombreLibros.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNombreLibros.ForeColor = System.Drawing.Color.DimGray;
             this.cmbNombreLibros.FormattingEnabled = true;
-            this.cmbNombreLibros.Location = new System.Drawing.Point(39, 43);
+            this.cmbNombreLibros.Location = new System.Drawing.Point(73, 135);
             this.cmbNombreLibros.Name = "cmbNombreLibros";
-            this.cmbNombreLibros.Size = new System.Drawing.Size(472, 24);
+            this.cmbNombreLibros.Size = new System.Drawing.Size(464, 25);
             this.cmbNombreLibros.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.cmbNombreLibros, "Aquí se escribira o mostrara el nombre del libro.\r\n");
             this.cmbNombreLibros.SelectedIndexChanged += new System.EventHandler(this.NombreLibros_SelectedIndexChanged);
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage1.Controls.Add(this.pictureBox21);
+            this.tabPage1.Controls.Add(this.pictureBox22);
+            this.tabPage1.Controls.Add(this.pictureBox19);
+            this.tabPage1.Controls.Add(this.pictureBox20);
+            this.tabPage1.Controls.Add(this.pictureBox18);
+            this.tabPage1.Controls.Add(this.pictureBox17);
+            this.tabPage1.Controls.Add(this.pictureBox16);
+            this.tabPage1.Controls.Add(this.pictureBox15);
             this.tabPage1.Controls.Add(this.lblEncabezado3erHoja);
             this.tabPage1.Controls.Add(this.lblAddEditoriales);
             this.tabPage1.Controls.Add(this.lblAddFormatos);
@@ -540,55 +676,63 @@
             this.tabPage1.Controls.Add(this.cmbAddFormatos);
             this.tabPage1.Controls.Add(this.cmbAddEditoriales);
             this.tabPage1.Controls.Add(this.cmbAddGeneros);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(708, 475);
+            this.tabPage1.Size = new System.Drawing.Size(602, 598);
             this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "AGREGAR ELEMENTOS";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Text = "Generos, Formatos y Editoriales";
             // 
             // lblEncabezado3erHoja
             // 
             this.lblEncabezado3erHoja.AutoSize = true;
-            this.lblEncabezado3erHoja.Location = new System.Drawing.Point(122, 13);
+            this.lblEncabezado3erHoja.Font = new System.Drawing.Font("Nexa Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncabezado3erHoja.Location = new System.Drawing.Point(100, 14);
             this.lblEncabezado3erHoja.Name = "lblEncabezado3erHoja";
-            this.lblEncabezado3erHoja.Size = new System.Drawing.Size(446, 16);
+            this.lblEncabezado3erHoja.Size = new System.Drawing.Size(409, 50);
             this.lblEncabezado3erHoja.TabIndex = 15;
-            this.lblEncabezado3erHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR ELEMENTOS DISPONIBLES";
+            this.lblEncabezado3erHoja.Text = "APARTADO PARA AGREGAR Y ELIMINAR \r\nELEMENTOS ADICIONALES\r\n";
+            this.lblEncabezado3erHoja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblEncabezado3erHoja.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblAddEditoriales
             // 
             this.lblAddEditoriales.AutoSize = true;
-            this.lblAddEditoriales.Location = new System.Drawing.Point(297, 261);
+            this.lblAddEditoriales.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddEditoriales.Location = new System.Drawing.Point(78, 416);
             this.lblAddEditoriales.Name = "lblAddEditoriales";
-            this.lblAddEditoriales.Size = new System.Drawing.Size(71, 16);
+            this.lblAddEditoriales.Size = new System.Drawing.Size(102, 21);
             this.lblAddEditoriales.TabIndex = 14;
-            this.lblAddEditoriales.Text = "Editoriales";
+            this.lblAddEditoriales.Text = "Editoriales :";
             // 
             // lblAddFormatos
             // 
             this.lblAddFormatos.AutoSize = true;
-            this.lblAddFormatos.Location = new System.Drawing.Point(495, 43);
+            this.lblAddFormatos.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddFormatos.Location = new System.Drawing.Point(78, 267);
             this.lblAddFormatos.Name = "lblAddFormatos";
-            this.lblAddFormatos.Size = new System.Drawing.Size(64, 16);
+            this.lblAddFormatos.Size = new System.Drawing.Size(95, 21);
             this.lblAddFormatos.TabIndex = 13;
-            this.lblAddFormatos.Text = "Formatos";
+            this.lblAddFormatos.Text = "Formatos :";
             // 
             // lblAddGeneros
             // 
             this.lblAddGeneros.AutoSize = true;
-            this.lblAddGeneros.Location = new System.Drawing.Point(139, 43);
+            this.lblAddGeneros.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddGeneros.Location = new System.Drawing.Point(78, 136);
             this.lblAddGeneros.Name = "lblAddGeneros";
-            this.lblAddGeneros.Size = new System.Drawing.Size(59, 16);
+            this.lblAddGeneros.Size = new System.Drawing.Size(83, 21);
             this.lblAddGeneros.TabIndex = 12;
-            this.lblAddGeneros.Text = "Generos";
+            this.lblAddGeneros.Text = "Generos :";
             // 
             // btnDelFormatos
             // 
-            this.btnDelFormatos.Location = new System.Drawing.Point(453, 172);
+            this.btnDelFormatos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelFormatos.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnDelFormatos.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDelFormatos.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelFormatos.Location = new System.Drawing.Point(405, 332);
             this.btnDelFormatos.Name = "btnDelFormatos";
-            this.btnDelFormatos.Size = new System.Drawing.Size(134, 39);
+            this.btnDelFormatos.Size = new System.Drawing.Size(117, 42);
             this.btnDelFormatos.TabIndex = 8;
             this.btnDelFormatos.Text = "Eliminar";
             this.btnDelFormatos.UseVisualStyleBackColor = true;
@@ -596,9 +740,13 @@
             // 
             // btnAddFormatos
             // 
-            this.btnAddFormatos.Location = new System.Drawing.Point(453, 111);
+            this.btnAddFormatos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddFormatos.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnAddFormatos.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAddFormatos.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFormatos.Location = new System.Drawing.Point(405, 267);
             this.btnAddFormatos.Name = "btnAddFormatos";
-            this.btnAddFormatos.Size = new System.Drawing.Size(134, 39);
+            this.btnAddFormatos.Size = new System.Drawing.Size(117, 42);
             this.btnAddFormatos.TabIndex = 7;
             this.btnAddFormatos.Text = "Añadir";
             this.btnAddFormatos.UseVisualStyleBackColor = true;
@@ -606,9 +754,13 @@
             // 
             // btnDelEditoriales
             // 
-            this.btnDelEditoriales.Location = new System.Drawing.Point(264, 390);
+            this.btnDelEditoriales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelEditoriales.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnDelEditoriales.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDelEditoriales.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelEditoriales.Location = new System.Drawing.Point(407, 481);
             this.btnDelEditoriales.Name = "btnDelEditoriales";
-            this.btnDelEditoriales.Size = new System.Drawing.Size(134, 39);
+            this.btnDelEditoriales.Size = new System.Drawing.Size(115, 42);
             this.btnDelEditoriales.TabIndex = 6;
             this.btnDelEditoriales.Text = "Eliminar";
             this.btnDelEditoriales.UseVisualStyleBackColor = true;
@@ -616,9 +768,13 @@
             // 
             // btnAddEditoriales
             // 
-            this.btnAddEditoriales.Location = new System.Drawing.Point(264, 329);
+            this.btnAddEditoriales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddEditoriales.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnAddEditoriales.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAddEditoriales.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEditoriales.Location = new System.Drawing.Point(405, 416);
             this.btnAddEditoriales.Name = "btnAddEditoriales";
-            this.btnAddEditoriales.Size = new System.Drawing.Size(134, 39);
+            this.btnAddEditoriales.Size = new System.Drawing.Size(117, 42);
             this.btnAddEditoriales.TabIndex = 5;
             this.btnAddEditoriales.Text = "Añadir";
             this.btnAddEditoriales.UseVisualStyleBackColor = true;
@@ -626,9 +782,13 @@
             // 
             // btnDelGeneros
             // 
-            this.btnDelGeneros.Location = new System.Drawing.Point(101, 172);
+            this.btnDelGeneros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelGeneros.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnDelGeneros.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDelGeneros.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelGeneros.Location = new System.Drawing.Point(405, 191);
             this.btnDelGeneros.Name = "btnDelGeneros";
-            this.btnDelGeneros.Size = new System.Drawing.Size(134, 39);
+            this.btnDelGeneros.Size = new System.Drawing.Size(117, 42);
             this.btnDelGeneros.TabIndex = 4;
             this.btnDelGeneros.Text = "Eliminar";
             this.btnDelGeneros.UseVisualStyleBackColor = true;
@@ -636,9 +796,13 @@
             // 
             // btnAddGeneros
             // 
-            this.btnAddGeneros.Location = new System.Drawing.Point(101, 111);
+            this.btnAddGeneros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddGeneros.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnAddGeneros.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAddGeneros.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddGeneros.Location = new System.Drawing.Point(405, 126);
             this.btnAddGeneros.Name = "btnAddGeneros";
-            this.btnAddGeneros.Size = new System.Drawing.Size(134, 39);
+            this.btnAddGeneros.Size = new System.Drawing.Size(117, 42);
             this.btnAddGeneros.TabIndex = 3;
             this.btnAddGeneros.Text = "Añadir";
             this.btnAddGeneros.UseVisualStyleBackColor = true;
@@ -646,53 +810,336 @@
             // 
             // cmbAddFormatos
             // 
+            this.cmbAddFormatos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cmbAddFormatos.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAddFormatos.ForeColor = System.Drawing.Color.DimGray;
             this.cmbAddFormatos.FormattingEnabled = true;
-            this.cmbAddFormatos.Location = new System.Drawing.Point(429, 62);
+            this.cmbAddFormatos.Location = new System.Drawing.Point(82, 306);
             this.cmbAddFormatos.Name = "cmbAddFormatos";
-            this.cmbAddFormatos.Size = new System.Drawing.Size(182, 24);
+            this.cmbAddFormatos.Size = new System.Drawing.Size(242, 25);
             this.cmbAddFormatos.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.cmbAddFormatos, "Para añadir: Escribe el nombre del formato y después, dale al botón.\r\n\r\nPara elim" +
+        "inar: Selecciona el formato y después, dale al botón.\r\n");
             this.cmbAddFormatos.SelectedIndexChanged += new System.EventHandler(this.cmbAddFormatos_SelectedIndexChanged);
             this.cmbAddFormatos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbAddFormatos_KeyPress);
             // 
             // cmbAddEditoriales
             // 
+            this.cmbAddEditoriales.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cmbAddEditoriales.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAddEditoriales.ForeColor = System.Drawing.Color.DimGray;
             this.cmbAddEditoriales.FormattingEnabled = true;
-            this.cmbAddEditoriales.Location = new System.Drawing.Point(244, 280);
+            this.cmbAddEditoriales.Location = new System.Drawing.Point(82, 458);
             this.cmbAddEditoriales.Name = "cmbAddEditoriales";
-            this.cmbAddEditoriales.Size = new System.Drawing.Size(182, 24);
+            this.cmbAddEditoriales.Size = new System.Drawing.Size(242, 25);
             this.cmbAddEditoriales.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.cmbAddEditoriales, "Para añadir: Escribe el nombre de la editorial y después, dale al botón.\r\n\r\nPara " +
+        "eliminar: Selecciona la editorial y después, dale al botón.\r\n");
             this.cmbAddEditoriales.SelectedIndexChanged += new System.EventHandler(this.cmbAddEditoriales_SelectedIndexChanged);
             this.cmbAddEditoriales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbAddEditoriales_KeyPress);
             // 
             // cmbAddGeneros
             // 
+            this.cmbAddGeneros.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cmbAddGeneros.Font = new System.Drawing.Font("Nexa Heavy", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAddGeneros.ForeColor = System.Drawing.Color.DimGray;
             this.cmbAddGeneros.FormattingEnabled = true;
-            this.cmbAddGeneros.Location = new System.Drawing.Point(76, 62);
+            this.cmbAddGeneros.Location = new System.Drawing.Point(82, 171);
             this.cmbAddGeneros.Name = "cmbAddGeneros";
-            this.cmbAddGeneros.Size = new System.Drawing.Size(182, 24);
+            this.cmbAddGeneros.Size = new System.Drawing.Size(242, 25);
             this.cmbAddGeneros.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.cmbAddGeneros, "Para añadir: Escribe el nombre del genero y después, dale al botón.\r\n\r\nPara elimi" +
+        "nar: Selecciona el genero y después, dale al botón.");
             this.cmbAddGeneros.SelectedIndexChanged += new System.EventHandler(this.cmbAddGeneros_SelectedIndexChanged);
             this.cmbAddGeneros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbAddGeneros_KeyPress);
             // 
             // btnRefrescar
             // 
-            this.btnRefrescar.Location = new System.Drawing.Point(739, 449);
+            this.btnRefrescar.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.Location = new System.Drawing.Point(634, 566);
             this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(91, 67);
+            this.btnRefrescar.Size = new System.Drawing.Size(91, 71);
             this.btnRefrescar.TabIndex = 36;
             this.btnRefrescar.Text = "Refrescar datos";
             this.btnRefrescar.UseVisualStyleBackColor = true;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Font = new System.Drawing.Font("Dunkin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.Location = new System.Drawing.Point(634, 13);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(91, 71);
+            this.btnAyuda.TabIndex = 47;
+            this.btnAyuda.Text = "Manual de usuario";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nexa Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(69, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 21);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Buscar :";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_de_cuentos;
+            this.pictureBox9.Location = new System.Drawing.Point(645, 492);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(71, 68);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 46;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::Proyecto_Final__Libreria_.Properties.Resources.buscar_alt;
+            this.pictureBox23.Location = new System.Drawing.Point(491, 59);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(49, 39);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 50;
+            this.pictureBox23.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox23, "Buscar");
+            this.pictureBox23.Click += new System.EventHandler(this.pictureBox23_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.White;
+            this.pictureBox10.Location = new System.Drawing.Point(63, 438);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(467, 3);
+            this.pictureBox10.TabIndex = 46;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Proyecto_Final__Libreria_.Properties.Resources.archivo_de_edicion;
+            this.pictureBox8.Location = new System.Drawing.Point(389, 534);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(35, 42);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 45;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Proyecto_Final__Libreria_.Properties.Resources.basura;
+            this.pictureBox7.Location = new System.Drawing.Point(232, 534);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(35, 42);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_medico;
+            this.pictureBox6.Location = new System.Drawing.Point(69, 534);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(35, 42);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 43;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::Proyecto_Final__Libreria_.Properties.Resources.izquierda;
+            this.pictureBox3.Location = new System.Drawing.Point(201, 466);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 42;
+            this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Atras");
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_circulo_flecha_derecha;
+            this.pictureBox5.Location = new System.Drawing.Point(408, 460);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(47, 44);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 41;
+            this.pictureBox5.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox5, "Ultimo libro");
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::Proyecto_Final__Libreria_.Properties.Resources.derecha;
+            this.pictureBox4.Location = new System.Drawing.Point(346, 466);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 40;
+            this.pictureBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox4, "Siguiente");
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_cubierta_abierta;
+            this.pictureBox2.Location = new System.Drawing.Point(269, 460);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_circulo_flecha_izquierda;
+            this.pictureBox1.Location = new System.Drawing.Point(127, 460);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Primer libro");
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::Proyecto_Final__Libreria_.Properties.Resources.libro_medico;
+            this.pictureBox14.Location = new System.Drawing.Point(89, 475);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(35, 42);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 50;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.White;
+            this.pictureBox13.Location = new System.Drawing.Point(65, 380);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(457, 3);
+            this.pictureBox13.TabIndex = 49;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Proyecto_Final__Libreria_.Properties.Resources.basura;
+            this.pictureBox12.Location = new System.Drawing.Point(89, 308);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(35, 42);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 48;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.White;
+            this.pictureBox11.Location = new System.Drawing.Point(65, 194);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(457, 3);
+            this.pictureBox11.TabIndex = 47;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::Proyecto_Final__Libreria_.Properties.Resources.basura;
+            this.pictureBox21.Location = new System.Drawing.Point(364, 481);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(37, 42);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox21.TabIndex = 56;
+            this.pictureBox21.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::Proyecto_Final__Libreria_.Properties.Resources.añadir_documento;
+            this.pictureBox22.Location = new System.Drawing.Point(364, 416);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(35, 42);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox22.TabIndex = 55;
+            this.pictureBox22.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::Proyecto_Final__Libreria_.Properties.Resources.basura;
+            this.pictureBox19.Location = new System.Drawing.Point(364, 332);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(37, 42);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox19.TabIndex = 54;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::Proyecto_Final__Libreria_.Properties.Resources.añadir_documento;
+            this.pictureBox20.Location = new System.Drawing.Point(364, 267);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(35, 42);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox20.TabIndex = 53;
+            this.pictureBox20.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.White;
+            this.pictureBox18.Location = new System.Drawing.Point(82, 395);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(440, 3);
+            this.pictureBox18.TabIndex = 52;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.White;
+            this.pictureBox17.Location = new System.Drawing.Point(82, 247);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(440, 3);
+            this.pictureBox17.TabIndex = 51;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::Proyecto_Final__Libreria_.Properties.Resources.basura;
+            this.pictureBox16.Location = new System.Drawing.Point(364, 191);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(37, 42);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 50;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::Proyecto_Final__Libreria_.Properties.Resources.añadir_documento;
+            this.pictureBox15.Location = new System.Drawing.Point(364, 126);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(35, 42);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 49;
+            this.pictureBox15.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 528);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(738, 653);
+            this.Controls.Add(this.btnAyuda);
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "INVENTARIO DE LIBRERÍA";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.AGREGAR.ResumeLayout(false);
             this.AGREGAR.PerformLayout();
@@ -701,6 +1148,29 @@
             this.CONSULTAR.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -733,10 +1203,6 @@
         private System.Windows.Forms.Label lblNombreLibro;
         private System.Windows.Forms.TextBox txtCantidadDe;
         private System.Windows.Forms.ComboBox cmbNombreLibros;
-        private System.Windows.Forms.Button BtnSiguiente;
-        private System.Windows.Forms.Button btnAnterior;
-        private System.Windows.Forms.Button btnFinal;
-        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.DateTimePicker calendarioB;
         private System.Windows.Forms.Button btnEliminar;
@@ -764,6 +1230,33 @@
         private System.Windows.Forms.Label lblEncabezado1erHoja;
         private System.Windows.Forms.Label lblEncabezado2daHoja;
         private System.Windows.Forms.Label lblEncabezado3erHoja;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.Label label1;
     }
 }
 
